@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/computer.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" media="screen and (max-width: 480px) and (orientation:portrait)" href="css/mobile.css">
+    <title>SafeConnectX</title>
+
+  <style>
+  * {
+	 margin: 0;
+	 padding: 0;
+	 box-sizing: border-box;
+}
+ body {
+	 transition: background 1s ease-in-out;
+}
+.section {
+	
+	 
+	
+    height: 100%;
+    color: rgba(255, 255, 255, 0);
+    
+    
+}
+.section[data-bg="yellow"] {
+    color: rgb(245, 221, 1);
+}
+
+
+@import "compass/css3";
+ 
+ .menu {
+	 filter: url('#shadowed-goo');
+}
+ .menu-item, .menu-open-button {
+	 background: #51ff00;
+	 border-radius: 100%;
+	 width: 80px;
+	 height: 80px;
+	
+	 position: absolute;
+	 top: 20px;
+	 color: rgb(0, 0, 0);
+	 text-align: center;
+	 line-height: 80px;
+	 transform: translate3d(0, 0, 0);
+	 transition: transform ease-out 200ms;
+}
+ .menu-open {
+	 display: none;
+}
+ .hamburger {
+	 width: 25px;
+	 height: 3px;
+	 background: rgb(0, 0, 0);
+	 display: block;
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 margin-left: -12.5px;
+	 margin-top: -1.5px;
+	 transition: transform 200ms;
+}
+ .hamburger-1 {
+	 transform: translate3d(0, -8px, 0);
+}
+ .hamburger-2 {
+	 transform: translate3d(0, 0, 0);
+}
+ .hamburger-3 {
+	 transform: translate3d(0, 8px, 0);
+}
+ .menu-open:checked + .menu-open-button .hamburger-1 {
+	 transform: translate3d(0, 0, 0) rotate(45deg);
+}
+ .menu-open:checked + .menu-open-button .hamburger-2 {
+	 transform: translate3d(0, 0, 0) scale(0.1, 1);
+}
+ .menu-open:checked + .menu-open-button .hamburger-3 {
+	 transform: translate3d(0, 0, 0) rotate(-45deg);
+}
+ .menu {
+	 position: fixed;
+     bottom: 0;
+     left: 0;
+	 width: 650px;
+	 height: 150px;
+     margin-bottom: 20px;
+     margin-left: 10px;
+	
+	 font-size: 20px;
+	 text-align: left;
+}
+ .menu-item:hover {
+	 background: rgb(2, 247, 255);
+	 color: #000000;
+}
+ .menu-item:nth-child(3) {
+	 transition-duration: 180ms;
+}
+ .menu-item:nth-child(4) {
+	 transition-duration: 180ms;
+}
+ .menu-item:nth-child(5) {
+	 transition-duration: 180ms;
+}
+ .menu-item:nth-child(6) {
+	 transition-duration: 180ms;
+}
+ .menu-open-button {
+	 z-index: 2;
+	 transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	 transition-duration: 400ms;
+	 transform: scale(1.1, 1.1) translate3d(0, 0, 0);
+	 cursor: pointer;
+}
+ .menu-open-button:hover {
+	 transform: scale(1.2, 1.2) translate3d(0, 0, 0);
+}
+ .menu-open:checked + .menu-open-button {
+	 transition-timing-function: linear;
+	 transition-duration: 200ms;
+	 transform: scale(0.8, 0.8) translate3d(0, 0, 0);
+}
+ .menu-open:checked ~ .menu-item {
+	 transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+ .menu-open:checked ~ .menu-item:nth-child(3) {
+	 transition-duration: 190ms;
+	 transform: translate3d(110px, 0, 0);
+}
+ .menu-open:checked ~ .menu-item:nth-child(4) {
+	 transition-duration: 290ms;
+	 transform: translate3d(220px, 0, 0);
+}
+ .menu-open:checked ~ .menu-item:nth-child(5) {
+	 transition-duration: 390ms;
+	 transform: translate3d(330px, 0, 0);
+}
+ .menu-open:checked ~ .menu-item:nth-child(6) {
+	 transition-duration: 490ms;
+	 transform: translate3d(440px, 0, 0);
+}
+ 
+.btn {
+  line-height: 50px;
+  height: 50px;
+  text-align: center;
+  width: 150px;
+  cursor: pointer;
+}
+
+.btn-two {
+  color: #FFF;
+  transition: all 0.5s;
+  position: relative; 
+}
+.btn-two span {
+  z-index: 2; 
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%; 
+}
+.btn-two::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.5s;
+  border: 1px solid rgba(255,255,255,0.2);
+  background-color: rgba(0, 0, 0, 0.623);
+}
+.btn-two::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.5s;
+  border: 1px solid rgba(0, 0, 0, 0.404);
+  background-color: rgba(0, 11, 161, 0);
+}
+.btn-two:hover::before {
+  transform: rotate(-45deg);
+  background-color: rgba(255,255,255,0);
+}
+.btn-two:hover::after {
+  transform: rotate(45deg);
+  background-color: rgba(255,255,255,0);
+}
+
+
+ 
+
+  </style>  
+  <style>
+        body , h2 {
+          font-family: 'Montserrat', sans-serif;
+        }
+    </style>
+    <style>
+        p {
+            font-family: 'Open Sans', sans-serif;
+        }
+    </style>
+  
+</head>
+<body style="background-color: #000000;">
+    <nav class="menu">
+        <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open"/>
+        <label class="menu-open-button" for="menu-open">
+          <span class="hamburger hamburger-1"></span>
+          <span class="hamburger hamburger-2"></span>
+          <span class="hamburger hamburger-3"></span>
+        </label>
+        
+        <a href="#" class="menu-item"> <i class="fa fa-bar-chart"></i> </a>
+        <a href="#" class="menu-item"> <i class="fa fa-plus"></i> </a>
+        <a href="#" class="menu-item"> <i class="fa fa-heart"></i> </a>
+        <a href="#" class="menu-item"> <i class="fa fa-envelope"></i> </a>
+        
+        
+      </nav>
+      
+      
+      <!-- filters -->
+      <svg style="height: -0px;" xmlns="http://www.w3.org/2000/svg" version="1.1">
+          <defs>
+            <filter id="shadowed-goo">
+                
+                <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+                <feGaussianBlur in="goo" stdDeviation="3" result="shadow" />
+                <feColorMatrix in="shadow" mode="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 -0.2" result="shadow" />
+                <feOffset in="shadow" dx="1" dy="1" result="shadow" />
+                <feComposite in2="shadow" in="goo" result="goo" />
+                <feComposite in2="goo" in="SourceGraphic" result="mix" />
+            </filter>
+            <filter id="goo">
+                <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+                <feComposite in2="goo" in="SourceGraphic" result="mix" />
+            </filter>
+          </defs>
+      </svg>
+    <div class="w3-top" data-aos="fade-down"   data-aos-duration="1000" >
+        <div class="w3-bar  w3-wide w3-padding w3-card w3-text-white" style="background-color: rgb(0, 0, 0);
+        backdrop-filter: blur(5px);">
+          <a href="index.html" class="w3-bar-item w3-button">SafeConnectX </a>
+          <!-- Float links to the right. Hide them on small screens -->
+          <div class="w3-right w3-hide-small">
+            <a href="index.html" class="w3-bar-item w3-button">Team</a>
+            <a href=# class="w3-bar-item w3-button" target="_blank">About</a>           
+            
+           
+            <a href="nft.html" class="w3-bar-item w3-button">Whitepaper</a>          
+            <a href="gamee.html" class="w3-bar-item w3-button">Roadmap</a>
+          </div>
+        </div>
+      </div>
+     
+      <header class="w3-display-container  w3-wide" style="max-width: 1800px;  height: 100vh;  background-image: url(img/hero.png); background-attachment: fixed;  background-size: 100% 100%;" >
+       
+      
+        <div class="w3-display-topmiddle  w3-center w3-padding" style="margin-top: 70px;" >
+            <p class="w3-xlarge w3-text-white" data-aos="flip-right" data-aos-duration="2000">WELCOME TO</p>
+        <div style="background-color: rgba(0, 0, 0, 0.198);
+        backdrop-filter: blur(5px);" data-aos="zoom-in" data-aos-delay="1000" data-aos-duration="2500">
+            <h1 class="w3-jumbo w3-text-white "style="padding: 25px;"><span class="w3-hide-small w3-text-light-grey" data-aos="zoom-in-down" data-aos-delay="1000" data-aos-duration="1000">SafeConnect</span><span class=" w3-black w3-opacity-min w3-padding" data-aos="" data-aos-delay="2500" data-aos-duration="1500"><b>X</b></span> </h1></div>
+        </div>
+        <div  class="w3-padding w3-display-middle  w3-center w3-text-white " style="margin-top: 100px; background-color: rgba(0, 0, 0, 0.335);
+        backdrop-filter: blur(5px);" >
+            <p data-aos="zoom-in" data-aos-delay="1000" data-aos-duration="500">Under Construction/Prelaunch - Soon to come : Safe Connections and Services for all things crypto/web3/nft/metaverse all powered by our native coin (presale info in telegram group)
+                JOIN US!</p>
+         </div>
+         <div  class="w3-display-bottommiddle " style="margin-bottom: 70px;" >
+            <div class="btn btn-two">
+                <span><strong>JOIN US!</strong></span>
+              </div>
+         </div>
+
+      </header>
+
+    <div class="section" data-bg="black">
+        <div class="w3-container w3-content  w3-center " ><br><br>
+            <img src="img/safu.png" class="w3-image w3-margin-top" data-aos="zoom-out" data-aos-delay="500" data-aos-duration="1500" ><br><br><br>
+            <h3 class="w3-border-bottom w3-content w3-center w3-border-light-grey w3-padding-16 w3-xxxlarge w3-text-white" data-aos="zoom-out-down" data-aos-duration="1000">Safe Connections - for all things blockchain</h3><br><br><br><br>
+            <p class="w3-content w3-xlarge w3-center w3-text-light-grey" data-aos="zoom-out-up" data-aos-delay="500" data-aos-duration="1000">Im not saying i know how to do all this ... <br>
+                but i know our community does...
+                this idea comes from experience in this scene.
+                  And from lots n lots of interactions meetings dealings friendships lies scams frauds emotions .  After all these experiences i know whats needed and what i would personally use - and the investors and newbys too ..  And after being a "dev" for multiple projects, some of my own,  i know what projects need too .  Its a dangerous and risky place,  and with a trustworthy source of information and connections,  it would lead to a more trusting and successful network . Through losing tons n tons of money to scams, and badplayers, and rugpulls - i have gained very valuable knowledge that you cant read or buy or learn, other than by experience.  And once you weed throught the bad , and have found the true and trusted and tested safe connections, you can have a much better blockchain experience . Thats what this will be  . SafeConnectX :) 
+            </p>
+          </div>
+        <br><br><br><br><br><br><br><br><br>
+    </div>
+    <div class="section" data-bg="orange" >
+        <div class="w3-container" >
+            <div class="w3-content w3-text-white w3-center">
+                <div class="w3-twothird">
+                    <h1  class=" w3-xxxlarge w3-border-black w3-text-black w3-padding w3-center" data-aos="fade-down" data-aos-duration="1000" >
+                        Oustascam.com
+                    </h1>
+                    <h1  class="w3-border-bottom w3-xxxlarge w3-border-black w3-text-black w3-padding w3-center" data-aos="fade-down" data-aos-duration="1000" >
+                     
+                    </h1>
+                 <p class="w3-center w3-xlarge w3-padding-64  w3-text-black" data-aos="fade-right" data-aos-delay="500" data-aos-duration="1000">
+                   <strong>V1 site in development now</strong>  <br>  Crypto's  NO scam instagram (clone)
+                         all the fun of shilling  + all the fuctions of IG
+                         Fun, Interactive, Fair, Unbiased rankings
+                         Influencer onboarding, Bounties for known scammers
+                         ScamSnitcher - snitch on scams, and recieve rewards
+                 </p>
+                </div>  
+                <div class="w3-third">
+                   <img src="img/safuservices.png"  class="w3-image" data-aos="fade-left" data-aos-delay="500" data-aos-duration="1000"
+                   data-aos-anchor-placement="top-bottom" style="margin-left: 20px;">
+                   <br><br><br><br><br><br><br>
+                </div>  
+                <h3 class="w3-border-bottom w3-content w3-center w3-border-black w3-padding-16 w3-xxxlarge w3-text-black" data-aos="zoom-out-down" data-aos-duration="1000">Some title here</h3><br><br><br><br>
+            <p class="w3-content w3-xlarge w3-center w3-text-black" data-aos="zoom-out-up" data-aos-delay="500" data-aos-duration="1000">Im not saying i know how to do all this ... <br>
+                but i know our community does...
+                this idea comes from experience in this scene.
+                  And from lots n lots of interactions meetings dealings friendships lies scams frauds emotions .  After all these experiences i know whats needed and what i would personally use - and the investors and newbys too ..  And after being a "dev" for multiple projects, some of my own,  i know what projects need too .  Its a dangerous and risky place,  and with a trustworthy source of information and connections,  it would lead to a more trusting and successful network . Through losing tons n tons of money to scams, and badplayers, and rugpulls - i have gained very valuable knowledge that you cant read or buy or learn, other than by experience.  And once you weed throught the bad , and have found the true and trusted and tested safe connections, you can have a much better blockchain experience . Thats what this will be  . SafeConnectX :) 
+            </p>
+
+            </div> 
+         </div>
+
+    </div>
+    
+          <div style=" position: fixed;
+          bottom: 0; background-color: rgba(0, 0, 0, 0.383);
+              backdrop-filter: blur(5px);">
+            <script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/coinMarquee.js"></script><div id="coinmarketcap-widget-marquee" coins="1,1027,825,1839,5994,6210,1966,11697" currency="USD" theme="dark" transparent="true" show-symbol-logo="true"></div>
+          </div>
+    </div>
+   
+<script>
+    window.sections = [...document.querySelectorAll('.section')];
+window.lastScrollTop = window.pageYOffset;
+
+document.body.style.background = window.sections[0].getAttribute('data-bg');
+
+window.addEventListener('scroll', onScroll);
+
+function onScroll() {
+  const scrollTop = window.pageYOffset;
+  
+  const section = window.sections
+    .map(section => {
+      const el = section;
+      const rect = el.getBoundingClientRect();
+      return {el, rect};
+    })
+    .find(section => section.rect.bottom >= (window.innerHeight * 0.5));
+  document.body.style.background = section.el.getAttribute('data-bg');
+}
+
+
+</script> 
+<script src="js/navbar.js"></script>
+<script src="js/mediaquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tsparticles/1.31.1/tsparticles.min.js"></script>
+<script src="js/app.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+    AOS.init();
+</script> 
+</body>
+</html>
