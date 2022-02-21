@@ -20,7 +20,39 @@
 	 margin: 0;
 	 padding: 0;
 	 box-sizing: border-box;
+   cursor: none;
 }
+
+
+.cursor{
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+		position: absolute;
+		transform: scale(1);
+		background-color: rgb(255, 255, 255);
+		mix-blend-mode: difference;
+		transition-timing-function: ease-out;
+		transition-duration: 50ms;
+    z-index: 1;
+    
+	}
+
+	.cursor2{
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+		position: absolute;
+		transform: scale(3);
+		background-color: gray;
+		opacity: 0.5;
+		transition-timing-function: ease-out;
+		transition-duration: 200ms;
+    z-index: 1;
+    
+	}
+
+
  body {
 	 transition: background 1s ease-in-out;
    font-weight:200;
@@ -121,11 +153,11 @@
 	 transition-duration: 180ms;
 }
  .menu-open-button {
-	 z-index: 2;
+	 z-index: 1;
 	 transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 	 transition-duration: 400ms;
 	 transform: scale(1.1, 1.1) translate3d(0, 0, 0);
-	 cursor: pointer;
+	 cursor: crosshair;
 }
  .menu-open-button:hover {
 	 transform: scale(1.2, 1.2) translate3d(0, 0, 0);
@@ -290,7 +322,9 @@ ul li a:hover:before{
     </style>
   
 </head>
-<body style="background-color: #000000;">
+<body style="background-color: #000000;"><div class="cursor"></div>
+  <div class="cursor2"></div>
+      
     <nav class="menu">
         <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open"/>
         <label class="menu-open-button" for="menu-open">
@@ -339,7 +373,7 @@ ul li a:hover:before{
      </ul>
       </div>
      
-      <header class="w3-display-container  w3-wide" style="max-width: 1800px;  height: 100vh;  background-image: url(img/hero.png); background-attachment: fixed;  background-size: 100% 100%;" >
+      <header class="w3-display-container  w3-wide" style="max-width: 1800px;  height: 100vh;  background-image: url(img/hero.png); background-attachment: fixed;  background-size: 100% 100%; " >
        
       
         <div class="w3-display-topmiddle  w3-center w3-padding" style="margin-top: 70px;" >
@@ -360,7 +394,7 @@ ul li a:hover:before{
             <p data-aos="zoom-in" data-aos-delay="1000" data-aos-duration="500">Under Construction/Prelaunch - Soon to come : Safe Connections and Services for all things crypto/web3/nft/metaverse all powered by our native coin (presale info in telegram group)
                <br> JOIN US!</p>
          </div>
-         <div  class="w3-display-bottommiddle " style="margin-bottom: 70px;" >
+         <div  class="w3-display-bottommiddle " style="margin-bottom: 70px; z-index: 1;" >
             <div class="btn btn-two">
                 <span><strong>JOIN US!</strong></span>
               </div>
@@ -421,6 +455,18 @@ ul li a:hover:before{
             <script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/coinMarquee.js"></script><div id="coinmarketcap-widget-marquee" coins="1,1027,825,1839,5994,6210,1966,11697" currency="USD" theme="dark" transparent="true" show-symbol-logo="true"></div>
           </div>
     </div>
+    <script>
+      const cursor = document.querySelector('.cursor');
+	document.addEventListener('mousemove', e => {
+		cursor.setAttribute("style", " top: "+(e.pageY -10)+"px; left: "+(e.pageX -10)+"px; ")
+	});
+
+	const cursor2 = document.querySelector('.cursor2');
+	document.addEventListener('mousemove', e => {
+		cursor2.setAttribute("style", " top: "+(e.pageY -10)+"px; left: "+(e.pageX -10)+"px; ")
+	});
+
+    </script>
    
 <script>
     window.sections = [...document.querySelectorAll('.section')];
