@@ -43,9 +43,9 @@
 		height: 20px;
 		border-radius: 50%;
 		position: absolute;
-		transform: scale(3);
-		background-color: gray;
-		opacity: 0.5;
+		transform: scale(2.5);
+		background-color: rgb(0, 255, 64);
+		opacity: 0.2;
 		transition-timing-function: ease-out;
 		transition-duration: 200ms;
     z-index: 1;
@@ -57,6 +57,113 @@
 	 transition: background 1s ease-in-out;
    font-weight:200;
    font-family: 'Titillium Web', sans-serif;
+}
+.maine {
+  display: flex;
+  
+  flex-direction: column;
+
+
+
+}
+
+.wrap {
+  margin: 2rem;
+
+  transform-style: preserve-3d;
+  transform: perspective(100rem);
+  float: left;
+  width: 33.33%;
+
+ 
+}
+
+.container {
+  --rX: 0;
+  --rY: 0;
+  --bX: 50%;
+  --bY: 80%;
+
+  width: 30rem;
+  height: 36rem;
+  border: 1px solid var(--background-color);
+  border-radius: 1.6rem;
+  padding: 4rem;
+
+  display: flex;
+  align-items: flex-start;
+
+  position: relative;
+  transform: rotateX(calc(var(--rX) * 1deg)) rotateY(calc(var(--rY) * 1deg));
+
+  background: linear-gradient(180deg, rgba(0,206,255,1) 0%, rgba(0,206,255,0.5550595238095238) 32%, rgba(0,206,255,0.27494747899159666) 70%, rgba(0,206,255,0) 100%);
+  background-position: var(--bX) var(--bY);
+  background-size: 40rem auto;
+  box-shadow: 0 0 3rem .5rem hsla(0, 0%, 0%, .2);
+
+  transition: transform .6s 1s;
+}
+
+.container::before,
+.container::after {
+  content: "";
+
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid #fff;
+
+  position: absolute;
+  z-index: 2;
+
+  opacity: .3;
+  transition: .3s;
+}
+
+.container::before {
+  top: 2rem;
+  right: 2rem;
+
+  border-bottom-width: 0;
+  border-left-width: 0;
+}
+
+.container::after {
+  bottom: 2rem;
+  left: 2rem;
+
+  border-top-width: 0;
+  border-right-width: 0;
+}
+
+.container--active {
+  transition: none;
+}
+
+.container--2 {
+  filter: hue-rotate(80deg) saturate(140%);
+}
+
+.container--3 {
+  filter: hue-rotate(160deg) saturate(140%);
+}
+
+.container h3 {
+  color: hsla(0, 0%, 100%, .6);
+  font-size: 2.2rem;
+}
+.container p {
+  color: hsla(0, 0%, 100%, .6);
+  font-size: 1.2rem;
+  position: relative;
+}
+
+
+.abs-site-link {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  color: hsla(0, 0%, 0%, .6);
+  font-size: 1.6rem;
 }
 .section {
 	
@@ -126,13 +233,13 @@
 }
  .menu {
 	 position: fixed;
-     bottom: 0;
+     top: 0;
      left: 0;
 	 width: 650px;
 	 height: 150px;
-     margin-bottom: 20px;
+     margin-top: 23px;
      margin-left: 10px;
-	
+	  z-index: 6;
 	 font-size: 20px;
 	 text-align: left;
 }
@@ -234,11 +341,13 @@
 }
 .btn-two:hover::before {
   transform: rotate(-45deg);
-  background-color: rgb(94, 255, 0);
+  background-color: rgb(255, 0, 64);
+ 
 }
 .btn-two:hover::after {
   transform: rotate(45deg);
   background-color: rgb(0, 1, 77);
+  color: #1eff09;
 }
 ul{
   margin:0;
@@ -403,9 +512,64 @@ ul li a:hover:before{
       </header>
 
     <div class="section" data-bg="MidnightBlue">
+      <section class="main w3-row w3-hide-medium w3-hide-small">
+
+        <div class=" wrap--1 w3-col s4" style="padding-top: 40px;">
+          <div class="container container--1">
+              <div>
+                <h3>TITLE 1</h3><br>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero dolorem dignissimos sit perspiciatis unde illum, in aspernatur deserunt repellendus, voluptate cumque incidunt cum illo excepturi expedita doloremque accusamus culpa? Error?</p>
+              </div>
+          </div>
+        </div>
+      
+        <div class="wrap--2 w3-col s4" style="padding-top: 40px;">
+          <div class="container container--2">
+              <div>
+                <h3>TITLE 2</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur dolore vitae nam molestias eaque iure quidem hic nostrum dolor reiciendis! Minus recusandae quae perspiciatis accusamus quibusdam, ipsum, ipsam, delectus dolorem quis modi repudiandae exercitationem. Facere soluta amet laboriosam ratione?</p>
+              </div>
+          </div>
+        </div>
+      
+        <div class=" wrap--3 w3-col s4" style="padding-top: 40px;">
+          <div class="container container--3">
+            <div>
+               <h3>TITLE 3</h3>
+               <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates ab optio voluptatum recusandae expedita! Nemo illum dicta optio fuga. Ipsum commodi earum nobis assumenda cumque?</p>
+             </div>
+          </div>
+        </div>
+      
+      </section>
+      <div class="section" data-bg="MidnightBlue">
+        <section class="maine  w3-hide-large" style="max-width: 90%;">
+  
+          <div class=" wrap--1 wrap" style="padding-top: 40px;">
+            <div class="container container--1">
+              <p>01. Normal</p>
+            </div>
+          </div>
+        
+          <div class="wrap--2 wrap" style="padding-top: 40px;">
+            <div class="container container--2">
+              <p>02. Reverse</p>
+            </div>
+          </div>
+        
+          <div class=" wrap--3 wrap" style="padding-top: 40px;">
+            <div class="container container--3">
+              <p>03. Normal</p>
+            </div>
+          </div>
+        
+        </section>
         <div class="w3-container w3-content  w3-center " ><br><br>
-            <img src="img/safu.png" class="w3-image w3-margin-top" data-aos="zoom-out" data-aos-delay="500" data-aos-duration="1500" ><br><br><br>
+            <br><br><br>
             <h3 class="w3-border-bottom w3-content w3-center w3-border-light-grey w3-padding-16 w3-xxxlarge w3-text-white" data-aos="zoom-out-down" data-aos-duration="1000">Safe Connections - for all things blockchain</h3><br><br><br><br>
+          
+            
+
             <p class="w3-content w3-xlarge w3-center w3-text-light-grey" data-aos="zoom-out-up" data-aos-delay="500" data-aos-duration="1000">Im not saying i know how to do all this ... <br>
                 but i know our community does...
                 this idea comes from experience in this scene.
@@ -491,6 +655,100 @@ function onScroll() {
 
 
 </script> 
+<script>
+  class parallaxTiltEffect {
+
+constructor({element, tiltEffect}) {
+
+  this.element = element;
+  this.container = this.element.querySelector(".container");
+  this.size = [300, 360];
+  [this.w, this.h] = this.size;
+
+  this.tiltEffect = tiltEffect;
+
+  this.mouseOnComponent = false;
+
+  this.handleMouseMove = this.handleMouseMove.bind(this);
+  this.handleMouseEnter = this.handleMouseEnter.bind(this);
+  this.handleMouseLeave = this.handleMouseLeave.bind(this);
+  this.defaultStates = this.defaultStates.bind(this);
+  this.setProperty = this.setProperty.bind(this);
+  this.init = this.init.bind(this);
+
+  this.init();
+}
+
+handleMouseMove(event) {
+  const {offsetX, offsetY} = event;
+
+  let X;
+  let Y;
+
+  if (this.tiltEffect === "reverse") {
+    X = ((offsetX - (this.w/2)) / 3) / 3;
+    Y = (-(offsetY - (this.h/2)) / 3) / 3;
+  }
+
+  else if (this.tiltEffect === "normal") {
+    X = (-(offsetX - (this.w/2)) / 3) / 3;
+    Y = ((offsetY - (this.h/2)) / 3) / 3;
+  }
+
+  this.setProperty('--rY', X.toFixed(2));
+  this.setProperty('--rX', Y.toFixed(2));
+
+  this.setProperty('--bY', (80 - (X/4).toFixed(2)) + '%');
+  this.setProperty('--bX', (50 - (Y/4).toFixed(2)) + '%');
+}
+
+handleMouseEnter() {
+  this.mouseOnComponent = true;
+  this.container.classList.add("container--active");
+}
+
+handleMouseLeave() {
+  this.mouseOnComponent = false;
+  this.defaultStates();
+}
+
+defaultStates() {
+  this.container.classList.remove("container--active");
+  this.setProperty('--rY', 0);
+  this.setProperty('--rX', 0);
+  this.setProperty('--bY', '80%');
+  this.setProperty('--bX', '50%');
+}
+
+setProperty(p, v) {
+  return this.container.style.setProperty(p, v);
+}
+
+init() {
+  this.element.addEventListener('mousemove', this.handleMouseMove);
+  this.element.addEventListener('mouseenter', this.handleMouseEnter);
+  this.element.addEventListener('mouseleave', this.handleMouseLeave);
+}
+
+}
+
+const $ = e => document.querySelector(e);
+
+const wrap1 = new parallaxTiltEffect({
+element: $('.wrap--1'),
+tiltEffect: 'reverse'
+});
+
+const wrap2 = new parallaxTiltEffect({
+element: $('.wrap--2'),
+tiltEffect: 'normal'
+});
+
+const wrap3 = new parallaxTiltEffect({
+element: $('.wrap--3'),
+tiltEffect: 'reverse'
+});
+</script>
 <script src="js/navbar.js"></script>
 <script src="js/mediaquery.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tsparticles/1.31.1/tsparticles.min.js"></script>
