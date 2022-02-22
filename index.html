@@ -25,8 +25,8 @@
 
 
 .cursor{
-		width: 20px;
-		height: 20px;
+		width: 15px;
+		height: 15px;
 		border-radius: 50%;
 		position: absolute;
 		transform: scale(1);
@@ -43,11 +43,11 @@
 		height: 20px;
 		border-radius: 50%;
 		position: absolute;
-		transform: scale(2.5);
+		transform: scale(2);
 		background-color: rgb(0, 255, 64);
 		opacity: 0.2;
 		transition-timing-function: ease-out;
-		transition-duration: 200ms;
+		transition-duration: 100ms;
     z-index: 1;
     
 	}
@@ -152,11 +152,12 @@
 }
 
 .container h3 {
-  color: hsla(0, 0%, 100%, .6);
-  font-size: 2.2rem;
+  color: rgb(0, 0, 0);
+  font-size: 3.2rem;
+  font-weight:bolder;
 }
 .container p {
-  color: hsla(0, 0%, 100%, .6);
+  color: rgb(219, 219, 219);
   font-size: 1.2rem;
   position: relative;
 }
@@ -189,14 +190,14 @@
 	 filter: url('#shadowed-goo');
 }
  .menu-item, .menu-open-button {
-	 background: #51ff00;
+	 background: #002550;
 	 border-radius: 100%;
 	 width: 60px;
 	 height: 60px;
 	
 	 position: absolute;
 	 top: 20px;
-	 color: rgb(0, 0, 0);
+	 color: rgb(9, 255, 0);
 	 text-align: center;
 	 line-height: 60px;
 	 transform: translate3d(0, 0, 0);
@@ -208,14 +209,14 @@
  .hamburger {
 	 width: 25px;
 	 height: 3px;
-	 background: rgb(0, 0, 0);
+	 background: rgb(148, 148, 148);
 	 display: block;
 	 position: absolute;
 	 top: 50%;
 	 left: 50%;
 	 margin-left: -12.5px;
 	 margin-top: -1.5px;
-	 transition: transform 700ms;
+	 transition: transform 900ms;
 }
  .hamburger-1 {
 	 transform: translate3d(0, -8px, 0);
@@ -358,10 +359,10 @@ ul{
   padding:0;
   display:flex;
   justify-content: end;
-  background-color: #00000081;
+  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7371323529411764) 34%, rgba(0,0,0,0.3533788515406162) 53%, rgba(0,0,0,0) 80%);
   backdrop-filter: blur(5px);
   border-radius: 10px;
-  height: 40px;
+  height: 50px;
 }
 
 ul li{
@@ -385,9 +386,9 @@ ul li a{
 }
 
 ul:hover li a{
-  transform:scale(1.5);
+  transform:scale(1.2);
   opacity:1;
-  filter:blur(3px);
+  filter:blur(1.5px);
 }
 
 ul li a:hover{
@@ -405,12 +406,12 @@ ul li a:before{
   left:0;
   width:100%;
   height:100%;
-  background:#1eff09;
-  transition:0.5s;
+  background:#ffffff;
+  transition:0.25s;
   transform-origin:left;
   transform:scaleX(0);
   z-index:-1;
-  border-radius: 2px;
+  border-radius: 4px;
 }
 
 ul li a:hover:before{
@@ -482,7 +483,7 @@ ul li a:hover:before{
         <li><a href="#">Services</a></li>
         <li><a href="#">Portfolio</a></li>
         <li><a href="#">Team</a></li>
-        <li><a href="#">Contact</a></li>
+        
      </ul>
       </div>
      
@@ -517,7 +518,7 @@ ul li a:hover:before{
         </div>
          <div  class="w3-display-bottommiddle " style="margin-bottom: 70px; z-index: 1;" >
             <div class="btn btn-two">
-                <span><strong>JOIN US!</strong></span>
+               <a href="https://telegram.me/SafeConnectX"  target="_blank"><span><strong>JOIN US!</strong></span></a> 
               </div>
          </div>
 
@@ -525,11 +526,11 @@ ul li a:hover:before{
 
    
       <section class="main w3-row w3-hide-medium w3-hide-small" style=" padding: 5rem; "><BR>
-      <h1 style="color: rgb(98, 98, 98); font-size: 20px; margin-left: 250px; font-weight: bold; " >  OUR SERVICES </h1>
-      <h1 class="w3-center" style="color: white; font-size: 60px; font-weight: bold;">SAFU CRYPTO/NFT/META</h1><BR></BR>
+      <h1 data-aos="fade-right" data-aos-delay="1500" data-aos-duration="1000" style="color: rgb(98, 98, 98); font-size: 20px; margin-left: 250px; font-weight: bold; " >  OUR SERVICES </h1>
+      <h1 data-aos="zoom-in" data-aos-delay="500" data-aos-duration="500" class="w3-center" style="color: white; font-size: 60px; font-weight: bold;">SAFU CRYPTO/NFT/META</h1><BR></BR>
     <div data-aos="fade-up"
     data-aos-anchor-placement="bottom-bottom" data-aos-duration="1000" data-aos-delay="500">
-        <div  class=" wrap--1 w3-col s4" style="padding-top: 40px;  transform-style: preserve-3d;
+        <div  class=" wrap--1 w3-col s4" style="padding-top: 40px;  transform-style: preserve-3d;  
         transform: perspective(100rem);">
           <div class="container container--1">
               <div>
@@ -601,7 +602,7 @@ ul li a:hover:before{
      <div class="section" data-bg="MidnightBlue">
           <div class="w3-container w3-content  w3-center " ><br><br>
               <br><br><br>
-              <h3 class="w3-border-bottom w3-content w3-center w3-border-black w3-padding-16 w3-xxxlarge w3-text-white" data-aos="zoom-out-down" data-aos-duration="1000">Safe Connections - for all things blockchain</h3><br><br><br><br>
+              <h3 class=" w3-content w3-center w3-border-black w3-padding-16 w3-xxxlarge w3-text-white" data-aos="zoom-out-down" data-aos-duration="1000">Safe Connections - for all things blockchain</h3><br><br><br><br>
             
               
 
@@ -614,15 +615,15 @@ ul li a:hover:before{
           
     </div>
     </div><br><br>
-    <div style="border-bottom: solid 2px rgba(255, 255, 255, 0.178)"></div><br><br><br><br><br><br><br><br><br>
+    <div style="border-bottom: solid 2px rgba(255, 255, 255, 0.178)" data-aos="fade-right" data-aos-delay="500" data-aos-duration="500"></div><br><br><br><br><br><br><br><br><br>
     <div class="section" data-bg="Indigo" >
         <div class="w3-container" >
             <div class="w3-content w3-text-white w3-center">
                 <div class="w3-twothird">
-                    <h1  class=" w3-xxxlarge w3-border-black w3-text-white w3-padding w3-center" data-aos="fade-down" data-aos-duration="1000" >
-                        Oustascam.com - Coming Soon
+                    <h1  class=" w3-xxxlarge w3-border-black w3-text-white w3-padding w3-center"  >
+                       <span data-aos="fade-right" data-aos-delay="500" data-aos-duration="1500">Oustascam.com </span>  <span data-aos="fade-left" data-aos-delay="1500" data-aos-duration="500" > - Coming Soon</span> 
                     </h1>
-                    <h1  class="w3-border-bottom w3-xxxlarge w3-border-black w3-text-white w3-padding w3-center" data-aos="fade-down" data-aos-duration="1000" >
+                    <h1  class="w3-xxxlarge w3-border-black w3-text-white w3-padding w3-center" data-aos="fade-down" data-aos-duration="1000" >
                      
                     </h1>
                  <p class="w3-center w3-xlarge w3-padding-64  w3-text-white" data-aos="fade-right" data-aos-delay="500" data-aos-duration="1000">
@@ -652,7 +653,7 @@ ul li a:hover:before{
     
           <div style=" position: fixed;
           bottom: 0; background-color: rgba(0, 0, 0, 0.383);
-              backdrop-filter: blur(5px); height:50px;">
+              backdrop-filter: blur(2px); height:50px;">
             <script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/coinMarquee.js"></script><div id="coinmarketcap-widget-marquee" coins="1,1027,825,1839,5994,6210,1966,11697" currency="USD" theme="dark" transparent="true" show-symbol-logo="true"></div>
           </div>
     </div>
@@ -778,7 +779,7 @@ tiltEffect: 'reverse'
 
 const wrap2 = new parallaxTiltEffect({
 element: $('.wrap--2'),
-tiltEffect: 'normal'
+tiltEffect: 'reverse'
 });
 
 const wrap3 = new parallaxTiltEffect({
