@@ -197,7 +197,7 @@
 	 height: 60px;
 	
 	 position: absolute;
-	 top: 20px;
+	 bottom: 0;
 	 color: rgb(9, 255, 0);
 	 text-align: center;
 	 line-height: 60px;
@@ -239,11 +239,11 @@
 }
  .menu {
 	 position: fixed;
-     top: 0;
+     bottom: 0;
      left: 0;
 	 width: 650px;
 	 height: 150px;
-     margin-top: 23px;
+     margin-bottom: 51px;
      margin-left: 10px;
 	  z-index: 6;
 	 font-size: 20px;
@@ -489,7 +489,7 @@ ul li a:hover:before{
 
     </div>
      
-      <header class="w3-display-container  w3-wide" style="max-width: 1800px;  height: 120vh;  background-image: url(img/hero.png); background-attachment: fixed;  background-size: 100% 100%; top: 0; " >
+      <header class="w3-display-container  w3-wide" style="width: 100vw;  height: 120vh;  background-image: url(img/hero.png); background-attachment: fixed;  background-size: 100% 100%; top: 0; " >
        
       
         <div class="w3-display-topmiddle  w3-center w3-padding" style="margin-top: 70px;" >
@@ -520,18 +520,18 @@ ul li a:hover:before{
         </div>
 
 
-        <div class="w3-display-left " style="z-index: 3; color: #FFF; display: flex; margin-bottom: 70px; margin-left: 30px; margin-top: 90px;">
-          <button id="connz" style=" font-size: 23px; background-color: #120044; color: #FFF; padding-left: 10px; padding-right: 10px; border-radius: 10px; "  > CONNECT</button>
+        <div class="w3-display-topleft " style="z-index: 3000000000000; color: #FFF; display: flex; margin-bottom: 70px; margin-left: 10px; margin-top: 10px;">
+          <button id="connz" style=" font-size: 23px; background-color: #120044; color: #FFF; padding-left: 10px; padding-right: 10px; border-radius: 10px; border-color: greenyellow 1px solid;"  > CONNECT</button>
           
          
         </div>
-       <div class="w3-display-right " style="z-index: 3; color: #FFF; display: flex; margin-bottom: 70px; margin-right: 30px;  margin-top: 90px;">
+       <div class="w3-display-middle w3-hide-small" style="z-index: 3; color: #FFF; display: flex; margin-bottom: 70px;   margin-top: 230px;">
         
         
         <button id="mintoza" style="margin-right: 50 px; font-size: 23px; background-color: #120044; color: #FFF; padding-left: 10px; padding-right: 10px; border-radius: 10px;" > MINT NFT </button>
        
        </div>
-       <div class="w3-display-topleft"  style="z-index: 3; color: #FFF; position: fixed; " >  <p>WALLET ADDRESS - <span id="wallet-address" ></span></p></div>
+       <div class="w3-display-topleft w3-hide-small"  style="z-index: 3; color: #FFF; position: fixed; " >  <p>WALLET ADDRESS - <span id="wallet-address" ></span></p></div>
      
         <script type="text/javascript">
             var account = null;
