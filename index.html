@@ -525,7 +525,7 @@ ul li a:hover:before{
           
          
         </div>
-       <div class="w3-display-middle" style="z-index: 3; color: #FFF; display: flex; margin-bottom: 70px;   margin-top: 230px;">
+       <div class="w3-display-middle w3-hide-small" style="z-index: 3; color: #FFF; display: flex; margin-bottom: 70px;   margin-top: 230px;">
         
         
         <button id="mintoza" style="margin-right: 50 px; font-size: 23px; background-color: #120044; color: #FFF; padding-left: 10px; padding-right: 10px; border-radius: 10px;" > MINT NFT </button>
@@ -1180,9 +1180,9 @@ ul li a:hover:before{
 		"stateMutability": "view",
 		"type": "function"
 	}
-] ;
+];
         
-        const ADDRESS = "0x2c1D9CfE85281D04e91B209646B3c4C56983FCcE";
+        const ADDRESS = "0xFC4dB84Ed71E338863B87Dd830E89C4775750a45";
         document.getElementById('connz').onclick = () =>   (async () => {
           if (window.ethereum) {
             await window.ethereum.send('eth_requestAccounts');
@@ -1195,7 +1195,7 @@ ul li a:hover:before{
             contract = new web3.eth.Contract(ABI, ADDRESS);
     
             document.getElementById('mintoza').onclick = () => {
-              contract.methods.mint(account).send({ from: account, value: 50000000000000000})
+              contract.methods.mint(account).send({ from: account, value: 20000000000000000})
             };
           }
         } )();
