@@ -11,7 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;500&family=Titillium+Web:ital,wght@0,200;0,600;1,200&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/computer.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/computer.css">
     <link rel="stylesheet" href="css/animation.css">
     <link rel="stylesheet" media="screen and (max-width: 480px) and (orientation:portrait)" href="css/mobile.css">
     <title>SafeConnectX</title>
@@ -361,15 +362,15 @@ ul{
   padding:0;
   display:flex;
   justify-content: end;
-  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7371323529411764) 34%, rgba(0,0,0,0.3533788515406162) 53%, rgba(0,0,0,0) 80%);
-  backdrop-filter: blur(5px);
+  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7371323529411764) 34%, rgba(0, 0, 0, 0.048) 53%, rgba(0,0,0,0) 80%);
+  backdrop-filter: blur(4px);
   border-radius: 10px;
-  height: 50px;
+  height: 40px;
 }
 
 ul li{
   list-style:none;
-  margin:0 20px;
+  margin:0 10px;
   transition:0.5s;
 }
 
@@ -379,18 +380,19 @@ ul li a{
   justify-content: end;
   text-decoration:none;
   padding:5px;
+  padding-top: 15px;
   font-size:18px;
   font-family: 'Rajdhani', sans-serif;
-  font-weight: 500;
+  font-weight: 200;
   color:#fff;
   text-transform:uppercase;
   transition:0.7s;
 }
 
 ul:hover li a{
-  transform:scale(1.2);
+  transform:scale(0.7);
   opacity:1;
-  filter:blur(1.5px);
+  filter:blur(2.5px);
 }
 
 ul li a:hover{
@@ -399,6 +401,7 @@ ul li a:hover{
   filter:blur(0);
   text-decoration:none;
   color:rgb(0, 0, 0);
+  font-weight: 700;
 }
 
 ul li a:before{
@@ -410,16 +413,17 @@ ul li a:before{
   height:100%;
   background:#ffffff;
   transition:0.25s;
-  transform-origin:left;
+  transform-origin:bottom;
   transform:scaleX(0);
   z-index:-1;
   border-radius: 4px;
 }
 
 ul li a:hover:before{
-  transition:transform 0.5s;
-  transform-origin:right;
+  transition:transform 0.25s;
+  transform-origin:bottom;
   transform:scaleX(1);
+  
 }
 
  
@@ -436,9 +440,21 @@ ul li a:hover:before{
           font-weight: 400;
         }
     </style>
+	<style>
+			#background-video {
+		width: 100vw;
+		height: 100vh;
+		object-fit: cover;
+		background-attachment: fixed;
+		left: 0;
+		bottom: 0;
+	
+		z-index: -1000000000;
+		}
+	</style>
   
 </head>
-<body style=" background-image: url(img/hero.jpg); background-attachment: fixed;  background-size: 100% 100%; top: 0;"><div class="cursor w3-hide-small"></div>
+<body style=" background: rgba(0, 0, 0, 0.745)  url(img/hero.jpg); background-attachment: fixed;  background-size: 100% 100%; top: 0;  background-blend-mode: darken;"><div class="cursor w3-hide-small"></div>
   <div class="cursor2 w3-hide-small"></div>
       
     <nav class="menu">
@@ -449,7 +465,7 @@ ul li a:hover:before{
           <span class="hamburger hamburger-3"></span>
         </label>
         
-        <a href="#" class="menu-item"> <i class="fa fa-bar-chart"></i> </a>
+       
         <a href="#" class="menu-item"> <i class="fa fa-plus"></i> </a>
         <a href="#" class="menu-item"> <i class="fa fa-heart"></i> </a>
         <a href="#" class="menu-item"> <i class="fa fa-envelope"></i> </a>
@@ -482,21 +498,37 @@ ul li a:hover:before{
       <ul>
 
        
-        <li><a href="#aboutz">About</a></li>
-        <li><a href="#services">Services</a></li>
+        
+        
         <li><a href="#roadmap">Roadmap</a></li>
-        <li><a href="#team">Team</a></li>
+		<li><a href="#tokenomics">Tokenomics</a></li>
+        <li><a href="#whitepaper">Whitepaper</a></li>
 		<li><a href="https://twitter.com/SafeconnectX" target="_blank"><i class="fab fa-twitter" style="font-size:36px; color: #1DA1F2;"></i></a></li>
 		<li><a href="https://discord.gg/bPeY5nYwze" target="_blank"><i class="fab fa-discord" style="font-size:36px; color: #5865F2; " ></i></a></li>
-		<li><a href="https://t.me/SafeConnectX " target="_blank"><i class="fab fa-telegram" style="font-size:36px; color: #229ED9;"></i></a></li>
+		<li style="margin-right: 20px;"><a href="https://t.me/SafeConnectX " target="_blank"><i class="fab fa-telegram" style="font-size:36px; color: #229ED9; "></i></a></li>
 		
         
      </ul>
 
     </div>
+	<div class="w3-top w3-hide-medium w3-hide-large" data-aos="fade-down"   data-aos-duration="1000" >
+		<ul>
+  
+		 
+
+		  <li><a href="https://twitter.com/SafeconnectX" target="_blank"><i class="fab fa-twitter" style="font-size:36px; color: #1DA1F2;"></i></a></li>
+		  <li><a href="https://discord.gg/bPeY5nYwze" target="_blank"><i class="fab fa-discord" style="font-size:36px; color: #5865F2; " ></i></a></li>
+		  <li><a href="https://t.me/SafeConnectX " target="_blank"><i class="fab fa-telegram" style="font-size:36px; color: #229ED9; margin-right: 20px;"></i></a></li>
+		  
+		  
+	   </ul>
+  
+	  </div>
      
-      <header class="w3-display-container  w3-wide" style="width: 100vw;  height: 120vh;  background-image: url(img/hero.jpg); background-attachment: fixed;  background-size: 100% 100%; top: 0;" >
-       
+      <header class="w3-display-container  w3-wide"  >
+		<video id="background-video" autoplay loop muted poster="img/coolvid.mp4">
+			<source src="img/noice.mp4" type="video/mp4">
+		  </video>
       
         <div class="w3-display-topmiddle  w3-center w3-padding" style="margin-top: 70px;" >
             <p class="w3-xlarge w3-text-white" data-aos="flip-right" data-aos-duration="1000">WELCOME TO</p>
@@ -510,10 +542,10 @@ ul li a:hover:before{
         backdrop-filter: blur(5px);" data-aos="zoom-in" data-aos-delay="1000" data-aos-duration="2500">
             <h1 class="w3-xxlarge w3-text-white "style="padding: 25px;"><span class=" w3-text-light-grey" data-aos="zoom-in-down" data-aos-delay="1000" data-aos-duration="1000">SafeConnect</span><span class=" w3-black w3-opacity-min w3-padding" data-aos="" data-aos-delay="2500" data-aos-duration="1500"><b>X</b></span> </h1></div>
         </div>
-        <div style="top:0;" data-aos="zoom-in" data-aos-delay="1000" data-aos-duration="500">
-          <div  class="w3-padding-32 w3-display-middle w3-large w3-center w3-text-white w3-hide-small" style="margin-top: 450px;font-style: italic; background-color: rgba(0, 0, 0, 0.185);
-          backdrop-filter: blur(5px);" >
-              <p data-aos="zoom-in" data-aos-delay="1000" data-aos-duration="500">Under Construction/Prelaunch - Soon to come : Safe Connections and Services for all things crypto/web3/nft/metaverse all powered by our native coin (presale info in telegram group)
+        <div class="w3-padding-32 w3-content w3-display-middle" data-aos="zoom-in" data-aos-delay="1000" data-aos-duration="500" ;">
+          <div  class="w3-padding-32 w3-content w3-display-middle w3-large w3-center w3-text-white w3-hide-small" style="font-style: italic; background-color: rgba(0, 0, 0, 0.185);
+          backdrop-filter: blur(5px); position: absolute; " >
+              <p class="w3-content" style="width: 700px;">Under Construction/Prelaunch - Soon to come : Safe Connections and Services for all things crypto/web3/nft/metaverse all powered by our native coin (presale info in telegram group)
                 <br> JOIN US!</p>
           </div><br><br>
         </div>
@@ -526,7 +558,7 @@ ul li a:hover:before{
         </div>
 
 
-        <div class="w3-display-topleft " style="z-index: 3000000000000; color: #FFF; display: flex; margin-bottom: 70px; margin-left: 1px; margin-top: 6px;">
+        <div class="w3-display-topleft " style="z-index: 3000000000000; color: #FFF; display: flex; margin-bottom: 70px; margin-left: 1px; margin-top: 6px; top: 0;">
           <button id="connz" style=" font-size: 23px; background-color: #120044; color: #FFF; padding-left: 10px; padding-right: 10px; border-radius: 10px; border-color: greenyellow 1px solid;"  > CONNECT</button>
           
          
@@ -537,7 +569,7 @@ ul li a:hover:before{
         <button id="mintoza" style="margin-right: 50 px; font-size: 23px; background-color: #120044; color: #FFF; padding-left: 10px; padding-right: 10px; border-radius: 10px;" > MINT NFT </button>
        
        </div>
-       <div class="w3-display-topleft w3-hide-small"  style="z-index: 3; color: #FFF; position: fixed; " >  <p>WALLET ADDRESS - <span id="wallet-address" ></span></p></div>
+       <div class="w3-display-topleft w3-hide-small"  style="z-index: 3; color: #FFF; position: fixed; " >  <p>WALLET - <span id="wallet-address" ></span></p></div>
      
         <script type="text/javascript">
             var account = null;
@@ -1245,7 +1277,7 @@ ul li a:hover:before{
     </div>
     </div><br><br>
 	<section class="main w3-row w3-hide-medium w3-hide-small" id="services" style=" padding: 5rem;"><BR>
-		<h1 data-aos="fade-right" data-aos-delay="1500" data-aos-duration="1000" style="color: rgb(255, 255, 255); font-size: 20px; margin-left: 250px; font-weight: bold;  " >  OUR SERVICES </h1>
+		<h1 data-aos="fade-right" data-aos-delay="1500" data-aos-duration="1000" style="color: rgb(255, 255, 255); font-size: 20px; margin-left: 50px; font-weight: bold;  " >  OUR SERVICES </h1>
 		<h1 data-aos="zoom-in" data-aos-delay="500" data-aos-duration="500" class="w3-center w3-content" style="color: white; font-size: 60px; font-weight: bold;  background-color: rgba(0, 0, 0, 0.185);
 		backdrop-filter: blur(5px);">SAFU CRYPTO/NFT/META</h1><BR></BR>
 	  <div data-aos="fade-up"
@@ -1362,6 +1394,61 @@ ul li a:hover:before{
             <script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/coinMarquee.js"></script><div id="coinmarketcap-widget-marquee" coins="1,1027,825,1839,5994,6210,1966,11697" currency="USD" theme="dark" transparent="true" show-symbol-logo="true"></div>
           </div>
     </div>
+	<div class="w3-container" id="roadmap">
+		<h1 data-aos="zoom-in"  data-aos-duration="500" class="w3-center " style="color: white; max-width: 50%; margin-left: 25%; font-size: 60px; font-weight: bold;  background-color: rgba(0, 0, 0, 0.185);
+		backdrop-filter: blur(5px);">SAFECONNECT.X ROADMAP</h1><br><br><br>
+		   <p class="w3-content w3-xlarge w3-center w3-text-light-grey w3-padding" data-aos="zoom-out-up" data-aos-delay="500" data-aos-duration="1000" style="background-color: rgba(0, 0, 0, 0.185);
+		   backdrop-filter: blur(5px);">I'm not one to believe that the future will be as you always expect, nor rely upon it being so. <br> So here's the roadmap, no overpromises - all deliverable and will be delivered with a smile :)
+		   </p><br><br>
+		<div class="timeline">
+  
+			<h2 class="timeline__item timeline__item--year" data-aos="zoom-in"  data-aos-duration="500">PHASE 1</h2>
+			
+			<div class="timeline__item" style="color: white;    background-color: rgba(0, 0, 0, 0.185);
+			backdrop-filter: blur(5px);" data-aos="fade-right" data-aos-delay="500" data-aos-duration="500">
+			  <h3 class="timeline__title" style="font-family: 'Titillium Web', sans-serif; font-weight: 200; ">- Social media creation <br>
+										  - Purchase domains <br>
+										  - Safeconnect.x platform launch <br>
+										  - Giveaways/Contests for community building <br>
+										  - Create token contract <br>
+										  - Social app launch (OUSTASCAM.COM) <br>
+										  - Announce initial partnerships/collaborations <br>
+										  - Safeconnect NFT #1 connectXcard <br>
+										  - Team 2.0 - Increase admin n# , doxxed team, legal team
+												
+			
+			  </h3>
+			</div>
+			
+			<h2 class="timeline__item timeline__item--year" data-aos="zoom-in"  data-aos-duration="500">PHASE 2</h2>
+			
+			<div class="timeline__item" style="color: white;    background-color: rgba(0, 0, 0, 0.185);
+			backdrop-filter: blur(5px);" data-aos="fade-left" data-aos-delay="500" data-aos-duration="500">
+			  <h3 class="timeline__title" style="font-family: 'Titillium Web', sans-serif; font-weight: 200; " >- Oustascam v2 DYOR Hub <br>
+				- Social platform, onboarding <br>
+				- Safeconnect NFT #2 Early investor gift <br>
+				- Safeconnect NFT Marketplace/launchpad <br>
+				- Initial marketing(Influencer campaigns, AMA tours, live events)
+			  </h3>
+			</div>
+			
+			<h2 class="timeline__item timeline__item--year" data-aos="zoom-in"  data-aos-duration="500">PHASE 3</h2>
+			
+			<div class="timeline__item" style="color: white;    background-color: rgba(0, 0, 0, 0.185);
+			backdrop-filter: blur(5px);" data-aos="fade-right" data-aos-delay="500" data-aos-duration="500">
+			  <h3 class="timeline__title" style="font-family: 'Titillium Web', sans-serif; font-weight: 200; ">- Safeconnect NFT #3  public onsale offering<br>
+				- Metaverse NFT Gallery  <br>
+				- Launch on Pancakeswap <br>
+				- Launch Party <br>
+				- Call groups
+			  </h3>
+			</div>
+			
+		
+			
+		  </div>
+
+	</div>
     <script>
       const cursor = document.querySelector('.cursor');
 	document.addEventListener('mousemove', e => {
