@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type="text/javascript" src="js/zapp.js"></script>
     <script src = "https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
 	<link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -13,6 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;500&family=Titillium+Web:ital,wght@0,200;0,600;1,200&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/chart.css">
 	<link rel="stylesheet" href="css/computer.css">
     <link rel="stylesheet" href="css/animation.css">
     <link rel="stylesheet" media="screen and (max-width: 480px) and (orientation:portrait)" href="css/mobile.css">
@@ -452,6 +454,129 @@ ul li a:hover:before{
 	
 		z-index: -1000000000;
 		}
+	</style>
+	<style>
+		figure {
+  background-color: rgba(238, 238, 238, 0);
+  display: inline-block;
+  height: 0;
+  margin: 0 auto;
+  
+  position: relative;
+  font-size:16px;
+  font-size:1vw;
+  width: 40em;
+  padding-bottom: 40em;
+  
+}
+figcaption {
+  font-size:1rem;
+  text-align:center;
+  color:rgba(255, 255, 255, 0);
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top:40%;
+  z-index:2;
+}
+svga {
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: visible;
+}
+circle {
+	fill:rgba(0,0,0,0);
+  stroke-width:31.8309886184;
+  stroke-dasharray: 0,0,0,100;
+  stroke-dashoffset: 25;
+  -webkit-animation: pie1 3s infinite ease both;
+  animation: pie1 6s infinite ease both;
+}
+.pie1 {
+  stroke:rgb(23, 182, 182);
+}
+
+    
+
+.pie2 {
+  stroke:rgb(48, 0, 104);
+  -webkit-animation-name: pie2;
+  animation-name: pie2;
+}
+.pie3 {
+  stroke:hsl(180,70%,20%);
+  -webkit-animation-name: pie3;
+  animation-name: pie3;
+}
+.pie4 {
+  stroke:rgb(0, 16, 240);
+  -webkit-animation-name: pie4;
+  animation-name: pie4;
+}
+.pie5 {
+  stroke:rgb(34, 25, 25);
+  -webkit-animation-name: pie5;
+  animation-name: pie5;
+}
+.pie6 {
+  stroke:rgb(255, 0, 0);
+  -webkit-animation-name: pie6;
+  animation-name: pie6;
+}
+
+/*
+ pie percentage made by stroke-dasharray.
+ stroke-dasharray format is...
+
+ keyframe 100% : 0 offset this-percentage rest
+
+ I added keyframe 50% for infinite presentation.
+*/
+
+/* 1st pie is 40% */
+@-webkit-keyframes pie1 {
+  50%,100% {stroke-dasharray: 20,80,0,0;}
+}
+@keyframes pie1 {
+  50%,100% {stroke-dasharray: 20,80,0,0;}
+}
+/* 2nd pie is 30% */
+@-webkit-keyframes pie2 {
+  50%,100% {stroke-dasharray: 0,20,12,68;}
+}
+@keyframes pie2 {
+  50%,100% {stroke-dasharray: 0,20,12,68;}
+}
+/* 3rd pie is 30% */
+@-webkit-keyframes pie3 {
+  50%,100% {stroke-dasharray: 0,32,40,28;}
+}
+@keyframes pie3 {
+  50%,100% {stroke-dasharray: 0,32,40,28;}
+}
+/* 4th pie is 10% */
+@-webkit-keyframes pie4 {
+  50%,100% {stroke-dasharray: 0,72,12,16;}
+}
+@keyframes pie4 {
+  50%,100% {stroke-dasharray: 0,72,12,16;}
+}
+@-webkit-keyframes pie5 {
+  50%,100% {stroke-dasharray: 0,84,4,12;}
+}
+@keyframes pie5 {
+  50%,100% {stroke-dasharray: 0,84,4,12;}
+}
+@-webkit-keyframes pie6 {
+  50%,100% {stroke-dasharray: 0,88,12,0;}
+}
+@keyframes pie6 {
+  50%,100% {stroke-dasharray: 0,88,12,0;}
+}
 	</style>
   
 </head>
@@ -1450,6 +1575,153 @@ ul li a:hover:before{
 		  </div>
 
 	</div>
+	<h3 class=" w3-content w3-container w3-center w3-border-black w3-padding-16 w3-xxxlarge w3-text-white w3-padding" data-aos="zoom-out-down" data-aos-duration="1000" style="background-color: rgba(0, 0, 0, 0);
+	backdrop-filter: blur(5px); max-width: 30%;" data-aos="zoom-in-down" data-aos-duration="1000">TOKENOMICS</h3><br><br><br>
+		<h3 class=" w3-content w3-container w3-center w3-border-black w3-padding-16 w3-xlarge w3-text-white w3-padding" data-aos="zoom-out-down" data-aos-duration="1000" style="background-color: rgba(0, 0, 0, 0);
+		backdrop-filter: blur(5px); max-width: 20%;" data-aos="zoom-in-down" data-aos-duration="1000">BUY TAX</h3>
+	 
+	<div class="w3-container w3-content" style="  display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: center;" > 
+
+		
+		<div class="pie" data-aos="fade-right" data-aos-delay="500" data-aos-duration="1000" >
+			<svg class="pie__canvas" viewbox="0 0 34 34" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+				<circle class="pie__frame" cx="17" cy="17" r="16" />
+				<circle  style=" stroke: rgb(72, 255, 0);
+				stroke-width: 2.5px;
+				stroke-linecap: round;
+				fill: none;" cx="17" cy="17" r="16" stroke-dasharray="40 100" />
+			</svg>
+		
+			<div class="pie__text">
+				<strong>LIQUIDITY-4%</strong>
+			</div>
+		</div>
+		  
+		<div class="pie" data-aos="fade-down" data-aos-delay="1000" data-aos-duration="1000">
+			<svg class="pie__canvas" viewbox="0 0 34 34" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+				<circle class="pie__frame" cx="17" cy="17" r="16" />
+				<circle  style=" stroke: rgb(72, 255, 0);
+				stroke-width: 2.5px;
+				stroke-linecap: round;
+				fill: none;" cx="17" cy="17" r="16" stroke-dasharray="40 100" />
+			</svg>
+		
+			<div class="pie__text">
+				<strong>MARKETING-4%</strong>
+			</div>
+		</div>
+		
+		<div class="pie" data-aos="fade-left" data-aos-delay="1500" data-aos-duration="1000">
+			<svg class="pie__canvas" viewbox="0 0 34 34" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+				<circle class="pie__frame" cx="17" cy="17" r="16" />
+				<circle  style=" stroke: rgb(72, 255, 0);
+				stroke-width: 2.5px;
+				stroke-linecap: round;
+				fill: none;" cx="17" cy="17" r="16" stroke-dasharray="20 100" />
+			</svg>
+		
+			<div class="pie__text">
+				<strong>TEAM-2%</strong>
+			</div>
+		</div>
+		
+
+		
+		
+		  
+
+	</div><br><br><br><br><br><br>
+	<h3 class=" w3-content w3-container w3-center w3-border-black w3-padding-16 w3-xlarge w3-text-white w3-padding" data-aos="zoom-out-down" data-aos-duration="1000" style="background-color: rgba(0, 0, 0, 0);
+		backdrop-filter: blur(5px); max-width: 20%;" data-aos="zoom-in-down" data-aos-duration="1000">SELL TAX</h3>
+	 
+	<div class="w3-container w3-content" style="  display: flex;
+												flex-flow: row wrap;
+												align-items: center;
+												justify-content: center;" > 
+
+		
+		<div class="pie" data-aos="fade-right" data-aos-delay="500" data-aos-duration="1000" >
+			<svg class="pie__canvas" viewbox="0 0 34 34" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+				<circle class="pie__framez" cx="17" cy="17" r="16" />
+				<circle     style="stroke: rgb(246, 0, 0);
+				stroke-width: 2.5px;
+				stroke-linecap: round;
+				fill: none;" cx="17" cy="17" r="16" stroke-dasharray="40 100" />
+			</svg>
+		
+			<div class="pie__text">
+				<strong>LIQUIDITY-6%</strong>
+			</div>
+		</div>
+		  
+		<div class="pie" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1000">
+			<svg class="pie__canvas" viewbox="0 0 34 34" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+				<circle class="pie__framez" cx="17" cy="17" r="16" />
+				<circle style="stroke: rgb(246, 0, 0);
+				stroke-width: 2.5px;
+				stroke-linecap: round;
+				fill: none;" cx="17" cy="17" r="16" stroke-dasharray="47 100" />
+			</svg>
+		
+			<div class="pie__text">
+				<strong>MARKETING-7%</strong>
+			</div>
+		</div>
+		
+		<div class="pie" data-aos="fade-left" data-aos-delay="1500" data-aos-duration="1000">
+			<svg class="pie__canvas" viewbox="0 0 34 34" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+				<circle class="pie__framez" cx="17" cy="17" r="16" />
+				<circle style="stroke: rgb(246, 0, 0);
+				stroke-width: 2.5px;
+				stroke-linecap: round;
+				fill: none;" cx="17" cy="17" r="16" stroke-dasharray="13 100" />
+			</svg>
+		
+			<div class="pie__text">
+				<strong>TEAM-2%</strong>
+			</div>
+		</div>
+		
+
+		
+		
+		  
+
+	</div><br><br><br><br><br><br>
+	<h3 class=" w3-content w3-container w3-center w3-border-black w3-padding-16 w3-xlarge w3-text-white w3-padding" data-aos="zoom-out-down" data-aos-duration="1000" style="background-color: rgba(0, 0, 0, 0);
+		backdrop-filter: blur(5px); max-width: 20%;" data-aos="zoom-in-down" data-aos-duration="1000">COIN DISTRIBUTION</h3><br><br>
+		<div class="w3-container w3-content w3-half" >
+			<figure>
+				
+				
+				  <svg viewBox="0 0 63.6619772368 63.6619772368">
+					  <circle class="pie1" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+					 
+					  <circle class="pie2" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+					  <circle class="pie3" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+					  <circle class="pie4" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+					  <circle class="pie5" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+					  <circle class="pie6" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+
+				  </svg>
+
+				 
+			  </figure>
+			  
+			 
+
+		</div>
+		<div class="w3-half" >
+			<p> <svg width="100" height="50">
+				<rect x="50" y="20" rx="20" ry="20" width="50" height="50"
+				style="fill:red;stroke:black;stroke-width:5;opacity:0.5; position: relative;" />
+			  </svg></p>
+			<p></p>
+
+		</div>
     <script>
       const cursor = document.querySelector('.cursor');
 	document.addEventListener('mousemove', e => {
@@ -1562,7 +1834,7 @@ tiltEffect: 'reverse'
 <script src="js/navbar.js"></script>
 <script src="js/mediaquery.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tsparticles/1.31.1/tsparticles.min.js"></script>
-<script src="js/app.js"></script>
+
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 <script>
