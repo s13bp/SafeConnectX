@@ -15,8 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;500&family=Titillium+Web:ital,wght@0,200;0,600;1,200&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/chart.css">
-	<link rel="stylesheet" href="css/computer.css">
-    <link rel="stylesheet" href="css/animation.css">
+	
     <link rel="stylesheet" media="screen and (max-width: 480px) and (orientation:portrait)" href="css/mobile.css">
     <title>SafeConnectX</title>
 	<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
@@ -40,7 +39,7 @@
 		mix-blend-mode: difference;
 		transition-timing-function: ease-out;
 		transition-duration: 50ms;
-    z-index: 1;
+    z-index: 3;
     
 	}
 
@@ -54,29 +53,33 @@
 		opacity: 0.2;
 		transition-timing-function: ease-out;
 		transition-duration: 100ms;
-    z-index: 1;
+    z-index: 3;
     
 	}
 
 
- body {
-	 transition: background 1s ease-in-out;
-   font-weight:200;
-   font-family: 'Titillium Web', sans-serif;
+ html, body {
+    max-width: 100vw;
+    font-weight:200;
+    font-family: 'Titillium Web', sans-serif;
+	overflow-x: hidden;
+	margin: 0;
+	padding: 0;
 }
 .maine {
   display: flex;
   justify-content: left;
   align-items: left;
   flex-direction: column;
-  left: 0;
+ 
+  max-width: 100vw;
 
 
 
 }
 
 .wrap {
-  margin: 2rem;
+  margin: 10px;
 
   transform-style: preserve-3d;
   transform: perspective(100rem);
@@ -246,7 +249,7 @@
 	 position: fixed;
      bottom: 0;
      left: 0;
-	 width: 650px;
+	 width: 90vw;
 	 height: 150px;
      margin-bottom: 51px;
      margin-left: 10px;
@@ -318,9 +321,10 @@
   transition: all 0.5s;
   position: relative; 
   font-size: larger;
+  
 }
 .btn-two span {
-  z-index: 2; 
+  z-index: 4; 
   display: block;
   position: absolute;
   width: 100%;
@@ -333,7 +337,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;
+  z-index: -1;
   transition: all 0.5s;
   border: 1px solid rgba(0, 0, 0, 0);
   background-color: rgba(51, 255, 0, 0);
@@ -345,7 +349,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;
+  z-index: 2;
   transition: all 0.5s;
   border: 1px solid rgba(251, 255, 0, 0);
   background-color: rgb(0, 11, 161);
@@ -353,6 +357,7 @@
 .btn-two:hover::before {
   transform: rotate(-45deg);
   background-color: rgb(255, 0, 64);
+  cursor: pointer;
  
 }
 .btn-two:hover::after {
@@ -369,6 +374,17 @@ ul{
   backdrop-filter: blur(4px);
   border-radius: 10px;
   height: 40px;
+}
+.phone{
+  margin:0;
+  padding:0;
+  display:flex;
+  justify-content: end;
+  background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.596) 34%, rgba(0, 0, 0, 0.404) 53%, rgba(0, 0, 0, 0.322) 80%);
+  backdrop-filter: blur(6px);
+ 
+  height: 50px;
+  max-width: 100vw;
 }
 
 ul li{
@@ -455,6 +471,18 @@ ul li a:hover:before{
 		z-index: -1000000000;
 		}
 	</style>
+		<style>
+			#backgroundz-video {
+		width: 100vw;
+		height: 100vh;
+		object-fit: cover;
+		position: fixed;
+		left: 0;
+		bottom: 0;
+		filter: brightness(40%);
+		z-index: -1000000000;
+		}
+	</style>
 	<style>
 		figure {
   background-color: rgba(238, 238, 238, 0);
@@ -466,6 +494,22 @@ ul li a:hover:before{
   font-size:16px;
   font-size:1vw;
   width: 40em;
+  padding-bottom: 40em;
+  
+}
+
+.simu {
+  background-color: rgba(238, 238, 238, 0);
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  height: 0;
+  margin: 0 auto;
+  
+  position: relative;
+  font-size:16px;
+  font-size:1vw;
+  width: 80vw;
   padding-bottom: 40em;
   
 }
@@ -580,1265 +624,1686 @@ circle {
 	</style>
   
 </head>
-<body style=" background: rgba(0, 0, 0, 0.745)  url(img/hero.jpg); background-attachment: fixed;  background-size: 100% 100%; top: 0;  background-blend-mode: darken;"><div class="cursor w3-hide-small"></div>
-  <div class="cursor2 w3-hide-small"></div>
-      
-    <nav class="menu">
-        <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open"/>
-        <label class="menu-open-button" for="menu-open">
-          <span class="hamburger hamburger-1"></span>
-          <span class="hamburger hamburger-2"></span>
-          <span class="hamburger hamburger-3"></span>
-        </label>
-        
-       
-        <a href="#" class="menu-item"> <i class="fa fa-plus"></i> </a>
-        <a href="#" class="menu-item"> <i class="fa fa-heart"></i> </a>
-        <a href="#" class="menu-item"> <i class="fa fa-envelope"></i> </a>
-        
-        
-      </nav>
-      
-      
-      <!-- filters -->
-      <svg style="height: -0px;" xmlns="http://www.w3.org/2000/svg" version="1.1">
-          <defs>
-            <filter id="shadowed-goo">
-                
-                <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
-                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
-                <feGaussianBlur in="goo" stdDeviation="3" result="shadow" />
-                <feColorMatrix in="shadow" mode="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 -0.2" result="shadow" />
-                <feOffset in="shadow" dx="1" dy="1" result="shadow" />
-                <feComposite in2="shadow" in="goo" result="goo" />
-                <feComposite in2="goo" in="SourceGraphic" result="mix" />
-            </filter>
-            <filter id="goo">
-                <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
-                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
-                <feComposite in2="goo" in="SourceGraphic" result="mix" />
-            </filter>
-          </defs>
-      </svg>
-    <div class="w3-top w3-hide-small" data-aos="fade-down"   data-aos-duration="1000" >
-      <ul>
-
-       
-        
-        
-        <li><a href="#roadmap">Roadmap</a></li>
-		<li><a href="#tokenomics">Tokenomics</a></li>
-        <li><a href="#whitepaper">Whitepaper</a></li>
-		<li><a href="https://twitter.com/SafeconnectX" target="_blank"><i class="fab fa-twitter" style="font-size:36px; color: #1DA1F2;"></i></a></li>
-		<li><a href="https://discord.gg/bPeY5nYwze" target="_blank"><i class="fab fa-discord" style="font-size:36px; color: #5865F2; " ></i></a></li>
-		<li style="margin-right: 20px;"><a href="https://t.me/SafeConnectX " target="_blank"><i class="fab fa-telegram" style="font-size:36px; color: #229ED9; "></i></a></li>
-		
-        
-     </ul>
-
-    </div>
-	<div class="w3-top w3-hide-medium w3-hide-large" data-aos="fade-down"   data-aos-duration="1000" >
-		<ul>
-  
-		 
-
-		  <li><a href="https://twitter.com/SafeconnectX" target="_blank"><i class="fab fa-twitter" style="font-size:36px; color: #1DA1F2;"></i></a></li>
-		  <li><a href="https://discord.gg/bPeY5nYwze" target="_blank"><i class="fab fa-discord" style="font-size:36px; color: #5865F2; " ></i></a></li>
-		  <li><a href="https://t.me/SafeConnectX " target="_blank"><i class="fab fa-telegram" style="font-size:36px; color: #229ED9; margin-right: 20px;"></i></a></li>
-		  
-		  
-	   </ul>
-  
-	  </div>
-     
-      <header class="w3-display-container  w3-wide"  >
-		<video id="background-video" autoplay loop muted poster="img/coolvid.mp4">
-			<source src="img/noice.mp4" type="video/mp4">
-		  </video>
-      
-        <div class="w3-display-topmiddle  w3-center w3-padding" style="margin-top: 70px;" >
-            <p class="w3-xlarge w3-text-white" data-aos="flip-right" data-aos-duration="1000">WELCOME TO</p>
-        <div class="w3-hide-small" style="background-color: rgba(0, 0, 0, 0.198);
-        backdrop-filter: blur(5px);" data-aos="zoom-in" data-aos-delay="5000" data-aos-duration="1500">
-            <h1 class="w3-jumbo w3-text-white "style="padding: 25px;"><span class=" w3-text-light-grey" data-aos="zoom-in-down" data-aos-delay="1000" data-aos-duration="1000">SafeConnect</span><span class=" w3-black w3-opacity-min w3-padding" data-aos="" data-aos-delay="2500" data-aos-duration="1500"><b>X</b></span> </h1></div>
-        </div>
-        <div class="w3-display-topmiddle  w3-center w3-padding" style="margin-top: 150px;" >
-         
-        <div class="w3-hide-medium w3-hide-large" style="background-color: rgba(0, 0, 0, 0.198);
-        backdrop-filter: blur(5px);" data-aos="zoom-in" data-aos-delay="1000" data-aos-duration="2500">
-            <h1 class="w3-xxlarge w3-text-white "style="padding: 25px;"><span class=" w3-text-light-grey" data-aos="zoom-in-down" data-aos-delay="1000" data-aos-duration="1000">SafeConnect</span><span class=" w3-black w3-opacity-min w3-padding" data-aos="" data-aos-delay="2500" data-aos-duration="1500"><b>X</b></span> </h1></div>
-        </div>
-        <div class="w3-padding-32 w3-content w3-display-middle" data-aos="zoom-in" data-aos-delay="1000" data-aos-duration="500" ;">
-          <div  class="w3-padding-32 w3-content w3-display-middle w3-large w3-center w3-text-white w3-hide-small" style="font-style: italic; background-color: rgba(0, 0, 0, 0.185);
-          backdrop-filter: blur(5px); position: absolute; " >
-              <p class="w3-content" style="width: 700px;">Under Construction/Prelaunch - Soon to come : Safe Connections and Services for all things crypto/web3/nft/metaverse all powered by our native coin (presale info in telegram group)
-                <br> JOIN US!</p>
-          </div><br><br>
-        </div>
-        <div style="top:0;" data-aos="zoom-in" data-aos-delay="1000" data-aos-duration="500">
-          <div  class="w3-padding-32 w3-display-middle w3-large w3-center w3-text-white w3-hide-medium w3-hide-large " style="margin-top: 550px;font-style: italic; background-color: rgba(0, 0, 0, 0.185);
-          backdrop-filter: blur(5px);" >
-              <p data-aos="zoom-in" data-aos-delay="1000" data-aos-duration="500">Under Construction/Prelaunch - Soon to come : Safe Connections and Services for all things crypto/web3/nft/metaverse all powered by our native coin (presale info in telegram group)
-                <br> JOIN US!</p>
-          </div><br><br>
-        </div>
-
-
-        <div class="w3-display-topleft " style="z-index: 3000000000000; color: #FFF; display: flex; margin-bottom: 70px; margin-left: 1px; margin-top: 6px; top: 0;">
-          <button id="connz" style=" font-size: 23px; background-color: #120044; color: #FFF; padding-left: 10px; padding-right: 10px; border-radius: 10px; border-color: greenyellow 1px solid;"  > CONNECT</button>
-          
-         
-        </div>
-       <div class="w3-display-middle w3-hide-small w3-hide medium w3-hide-large" style="z-index: 3; color: #FFF; display: flex; margin-bottom: 70px;   margin-top: 230px;">
-        
-        
-        <button id="mintoza" style="margin-right: 50 px; font-size: 23px; background-color: #120044; color: #FFF; padding-left: 10px; padding-right: 10px; border-radius: 10px;" > MINT NFT </button>
-       
-       </div>
-       <div class="w3-display-topleft w3-hide-small"  style="z-index: 3; color: #FFF; position: fixed; margin-top: 10px;" >  <p>WALLET - <span id="wallet-address" ></span></p></div>
-     
-        <script type="text/javascript">
-            var account = null;
-            var contract = null;
-        
-    
-            const ABI = [
-	{
-		"inputs": [
-			{
-				"internalType": "string",
-				"name": "_name",
-				"type": "string"
-			},
-			{
-				"internalType": "string",
-				"name": "_symbol",
-				"type": "string"
-			},
-			{
-				"internalType": "string",
-				"name": "_initBaseURI",
-				"type": "string"
-			}
-		],
-		"stateMutability": "nonpayable",
-		"type": "constructor"
-	},
-	{
-		"anonymous": false,
-		"inputs": [
-			{
-				"indexed": true,
-				"internalType": "address",
-				"name": "owner",
-				"type": "address"
-			},
-			{
-				"indexed": true,
-				"internalType": "address",
-				"name": "approved",
-				"type": "address"
-			},
-			{
-				"indexed": true,
-				"internalType": "uint256",
-				"name": "tokenId",
-				"type": "uint256"
-			}
-		],
-		"name": "Approval",
-		"type": "event"
-	},
-	{
-		"anonymous": false,
-		"inputs": [
-			{
-				"indexed": true,
-				"internalType": "address",
-				"name": "owner",
-				"type": "address"
-			},
-			{
-				"indexed": true,
-				"internalType": "address",
-				"name": "operator",
-				"type": "address"
-			},
-			{
-				"indexed": false,
-				"internalType": "bool",
-				"name": "approved",
-				"type": "bool"
-			}
-		],
-		"name": "ApprovalForAll",
-		"type": "event"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "to",
-				"type": "address"
-			},
-			{
-				"internalType": "uint256",
-				"name": "tokenId",
-				"type": "uint256"
-			}
-		],
-		"name": "approve",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "to",
-				"type": "address"
-			}
-		],
-		"name": "mint",
-		"outputs": [],
-		"stateMutability": "payable",
-		"type": "function"
-	},
-	{
-		"anonymous": false,
-		"inputs": [
-			{
-				"indexed": true,
-				"internalType": "address",
-				"name": "previousOwner",
-				"type": "address"
-			},
-			{
-				"indexed": true,
-				"internalType": "address",
-				"name": "newOwner",
-				"type": "address"
-			}
-		],
-		"name": "OwnershipTransferred",
-		"type": "event"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "bool",
-				"name": "_state",
-				"type": "bool"
-			}
-		],
-		"name": "pause",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "renounceOwnership",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "from",
-				"type": "address"
-			},
-			{
-				"internalType": "address",
-				"name": "to",
-				"type": "address"
-			},
-			{
-				"internalType": "uint256",
-				"name": "tokenId",
-				"type": "uint256"
-			}
-		],
-		"name": "safeTransferFrom",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "from",
-				"type": "address"
-			},
-			{
-				"internalType": "address",
-				"name": "to",
-				"type": "address"
-			},
-			{
-				"internalType": "uint256",
-				"name": "tokenId",
-				"type": "uint256"
-			},
-			{
-				"internalType": "bytes",
-				"name": "_data",
-				"type": "bytes"
-			}
-		],
-		"name": "safeTransferFrom",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "operator",
-				"type": "address"
-			},
-			{
-				"internalType": "bool",
-				"name": "approved",
-				"type": "bool"
-			}
-		],
-		"name": "setApprovalForAll",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "string",
-				"name": "_newBaseExtension",
-				"type": "string"
-			}
-		],
-		"name": "setBaseExtension",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "string",
-				"name": "_newBaseURI",
-				"type": "string"
-			}
-		],
-		"name": "setBaseURI",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "_newCost",
-				"type": "uint256"
-			}
-		],
-		"name": "setCost",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "_newmaxMintAmount",
-				"type": "uint256"
-			}
-		],
-		"name": "setmaxMintAmount",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"anonymous": false,
-		"inputs": [
-			{
-				"indexed": true,
-				"internalType": "address",
-				"name": "from",
-				"type": "address"
-			},
-			{
-				"indexed": true,
-				"internalType": "address",
-				"name": "to",
-				"type": "address"
-			},
-			{
-				"indexed": true,
-				"internalType": "uint256",
-				"name": "tokenId",
-				"type": "uint256"
-			}
-		],
-		"name": "Transfer",
-		"type": "event"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "from",
-				"type": "address"
-			},
-			{
-				"internalType": "address",
-				"name": "to",
-				"type": "address"
-			},
-			{
-				"internalType": "uint256",
-				"name": "tokenId",
-				"type": "uint256"
-			}
-		],
-		"name": "transferFrom",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "newOwner",
-				"type": "address"
-			}
-		],
-		"name": "transferOwnership",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "withdraw",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "owner",
-				"type": "address"
-			}
-		],
-		"name": "balanceOf",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "baseExtension",
-		"outputs": [
-			{
-				"internalType": "string",
-				"name": "",
-				"type": "string"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "baseURI",
-		"outputs": [
-			{
-				"internalType": "string",
-				"name": "",
-				"type": "string"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "cost",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "tokenId",
-				"type": "uint256"
-			}
-		],
-		"name": "getApproved",
-		"outputs": [
-			{
-				"internalType": "address",
-				"name": "",
-				"type": "address"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "owner",
-				"type": "address"
-			},
-			{
-				"internalType": "address",
-				"name": "operator",
-				"type": "address"
-			}
-		],
-		"name": "isApprovedForAll",
-		"outputs": [
-			{
-				"internalType": "bool",
-				"name": "",
-				"type": "bool"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "maxMintAmount",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "maxSupply",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "name",
-		"outputs": [
-			{
-				"internalType": "string",
-				"name": "",
-				"type": "string"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "owner",
-		"outputs": [
-			{
-				"internalType": "address",
-				"name": "",
-				"type": "address"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "tokenId",
-				"type": "uint256"
-			}
-		],
-		"name": "ownerOf",
-		"outputs": [
-			{
-				"internalType": "address",
-				"name": "",
-				"type": "address"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "paused",
-		"outputs": [
-			{
-				"internalType": "bool",
-				"name": "",
-				"type": "bool"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "bytes4",
-				"name": "interfaceId",
-				"type": "bytes4"
-			}
-		],
-		"name": "supportsInterface",
-		"outputs": [
-			{
-				"internalType": "bool",
-				"name": "",
-				"type": "bool"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "symbol",
-		"outputs": [
-			{
-				"internalType": "string",
-				"name": "",
-				"type": "string"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "index",
-				"type": "uint256"
-			}
-		],
-		"name": "tokenByIndex",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "owner",
-				"type": "address"
-			},
-			{
-				"internalType": "uint256",
-				"name": "index",
-				"type": "uint256"
-			}
-		],
-		"name": "tokenOfOwnerByIndex",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "tokenId",
-				"type": "uint256"
-			}
-		],
-		"name": "tokenURI",
-		"outputs": [
-			{
-				"internalType": "string",
-				"name": "",
-				"type": "string"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "totalSupply",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "_owner",
-				"type": "address"
-			}
-		],
-		"name": "walletOfOwner",
-		"outputs": [
-			{
-				"internalType": "uint256[]",
-				"name": "",
-				"type": "uint256[]"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	}
-];
-        
-        const ADDRESS = "0xFC4dB84Ed71E338863B87Dd830E89C4775750a45";
-        document.getElementById('connz').onclick = () =>   (async () => {
-          if (window.ethereum) {
-            await window.ethereum.send('eth_requestAccounts');
-            window.web3 = new Web3(window.ethereum);
-    
-            var accounts = await web3.eth.getAccounts();
-            account = accounts[0];
-              document.getElementById('wallet-address').textContent = account;
-    
-            contract = new web3.eth.Contract(ABI, ADDRESS);
-    
-            document.getElementById('mintoza').onclick = () => {
-              contract.methods.mint(account).send({ from: account, value: 20000000000000000})
-            };
-          }
-        } )();
-    
-           
-    
-    
-    
-    
-    
-    
-        </script>
-
-
-         <div  class="w3-display-bottommiddle " style="margin-bottom: 70px; z-index: 1;" >
-            <div class="btn btn-two">
-               <a href="https://telegram.me/SafeConnectX"  target="_blank"><span><strong>JOIN US!</strong></span></a> 
-              </div>
-         </div>
-
-      </header>
-
-   
-  
-     <div  id="aboutz" >
-          <div class="w3-container w3-content  w3-center " ><br><br>
-              <br><br><br>
-              <h3 class=" w3-content w3-center w3-border-black w3-padding-16 w3-xxxlarge w3-text-white w3-padding" data-aos="zoom-out-down" data-aos-duration="1000" style="background-color: rgba(0, 0, 0, 0.185);
-			  backdrop-filter: blur(5px);">SAFE CONNECTIONS - FOR ALL THINGS BLOCKCHAIN</h3><br><br><br><br>
-            
-              
-
-              <p class="w3-content w3-xlarge w3-center w3-text-light-grey w3-padding" data-aos="zoom-out-up" data-aos-delay="500" data-aos-duration="1000" style="background-color: rgba(0, 0, 0, 0.185);
-			  backdrop-filter: blur(5px);">Im not saying i know how to do all this ... <br>
-                  but i know our community does...
-                  this idea comes from experience in this scene.
-                    And from lots n lots of interactions meetings dealings friendships lies scams frauds emotions .  After all these experiences i know whats needed and what i would personally use - and the investors and newbys too ..  And after being a "dev" for multiple projects, some of my own,  i know what projects need too .  Its a dangerous and risky place,  and with a trustworthy source of information and connections,  it would lead to a more trusting and successful network . Through losing tons n tons of money to scams, and badplayers, and rugpulls - i have gained very valuable knowledge that you cant read or buy or learn, other than by experience.  And once you weed throught the bad , and have found the true and trusted and tested safe connections, you can have a much better blockchain experience . Thats what this will be  . SafeConnectX :) 
-              </p>
-            </div>
-          
-    </div>
-    </div><br><br>
-	<section class="main w3-row w3-hide-medium w3-hide-small" id="services" style=" padding: 5rem;"><BR>
-		<h1 data-aos="fade-right" data-aos-delay="1500" data-aos-duration="1000" style="color: rgb(255, 255, 255); font-size: 20px; margin-left: 50px; font-weight: bold;  " >  OUR SERVICES </h1>
-		<h1 data-aos="zoom-in" data-aos-delay="500" data-aos-duration="500" class="w3-center w3-content" style="color: white; font-size: 60px; font-weight: bold;  background-color: rgba(0, 0, 0, 0.185);
-		backdrop-filter: blur(5px);">SAFU CRYPTO/NFT/META</h1><BR></BR>
-	  <div data-aos="fade-up"
-	  data-aos-anchor-placement="bottom-bottom" data-aos-duration="1000" data-aos-delay="500">
-		  <div  class=" wrap--1 w3-col s4" style="padding-top: 40px;  transform-style: preserve-3d;  
-		  transform: perspective(100rem);">
-			<div class="container container--1">
-				<div>
-				  <h3></h3><br>
-				  <p></p>
+<body >								<div class="cursor w3-hide-small"></div>
+				<div class="cursor2 w3-hide-small"></div>
+				<div style=" position: fixed; z-index: 1;
+				bottom: 0; background-color: rgba(0, 0, 0, 0.383);
+					backdrop-filter: blur(2px); height:50px;">
+					<script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/coinMarquee.js"></script><div id="coinmarketcap-widget-marquee" coins="1,1027,825,1839,5994,6210,1966,11697" currency="USD" theme="dark" transparent="true" show-symbol-logo="true"></div>
 				</div>
-			</div>
-		  </div>
-		
-		  <div class="wrap--2 w3-col s4" style="padding-top: 40px;  transform-style: preserve-3d;
-		  transform: perspective(100rem);">
-			<div class="container container--2">
-				<div>
-				  <h3></h3>
-				  <p></p>
+			<section class="w3-hide-small"  style=" background: rgba(0, 0, 0, 0.745)  url(img/hero.jpg); background-attachment: fixed;  background-size: 100% 100%; top: 0;  background-blend-mode: darken; z-index: -9; max-width: 100vw;">		
+					<nav class="menu">
+						<input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open"/>
+						<label class="menu-open-button" for="menu-open">
+						<span class="hamburger hamburger-1"></span>
+						<span class="hamburger hamburger-2"></span>
+						<span class="hamburger hamburger-3"></span>
+						</label>
+						
+					
+						<a href="#" class="menu-item"> <i class="fa fa-plus"></i> </a>
+						<a href="#" class="menu-item"> <i class="fa fa-heart"></i> </a>
+						<a href="#" class="menu-item"> <i class="fa fa-envelope"></i> </a>
+						
+						
+					</nav>
+					
+					
+					<!-- filters -->
+					<svg style="height: -0px;" xmlns="http://www.w3.org/2000/svg" version="1.1">
+						<defs>
+							<filter id="shadowed-goo">
+								
+								<feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+								<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+								<feGaussianBlur in="goo" stdDeviation="3" result="shadow" />
+								<feColorMatrix in="shadow" mode="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 -0.2" result="shadow" />
+								<feOffset in="shadow" dx="1" dy="1" result="shadow" />
+								<feComposite in2="shadow" in="goo" result="goo" />
+								<feComposite in2="goo" in="SourceGraphic" result="mix" />
+							</filter>
+							<filter id="goo">
+								<feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+								<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+								<feComposite in2="goo" in="SourceGraphic" result="mix" />
+							</filter>
+						</defs>
+					</svg>
+					<div class="w3-top w3-hide-small" data-aos="fade-down"   data-aos-duration="1000"  style="z-index: 4;">
+					<ul>
+
+					
+						
+						
+						<li><a href="#roadmap">Roadmap</a></li>
+						<li><a href="#tokenomics">Tokenomics</a></li>
+						<li><a href="#whitepaper">Whitepaper</a></li>
+						<li><a href="https://twitter.com/SafeconnectX" target="_blank"><i class="fab fa-twitter" style="font-size:36px; color: #1DA1F2;"></i></a></li>
+						<li><a href="https://discord.gg/bPeY5nYwze" target="_blank"><i class="fab fa-discord" style="font-size:36px; color: #5865F2; " ></i></a></li>
+						<li style="margin-right: 20px;"><a href="https://t.me/SafeConnectX " target="_blank"><i class="fab fa-telegram" style="font-size:36px; color: #229ED9; "></i></a></li>
+						
+						
+					</ul>
+
+					</div>
+					<div class="w3-top w3-hide-medium w3-hide-large" data-aos="fade-down"   data-aos-duration="1000" >
+						<ul>
+				
+						
+
+						<li><a href="https://twitter.com/SafeconnectX" target="_blank"><i class="fab fa-twitter" style="font-size:36px; color: #1DA1F2;"></i></a></li>
+						<li><a href="https://discord.gg/bPeY5nYwze" target="_blank"><i class="fab fa-discord" style="font-size:36px; color: #5865F2; " ></i></a></li>
+						<li><a href="https://t.me/SafeConnectX " target="_blank"><i class="fab fa-telegram" style="font-size:36px; color: #229ED9; margin-right: 20px;"></i></a></li>
+						
+						
+					</ul>
+				
+					</div>
+					
+					<header class="w3-display-container  w3-wide" style="z-index: 2;" >
+						<video id="background-video" autoplay loop muted poster="img/coolvid.mp4">
+							<source src="img/noice.mp4" type="video/mp4">
+						</video>
+					
+						<div class="w3-display-topmiddle  w3-center w3-padding" style="margin-top: 70px;" >
+							<p class="w3-xlarge w3-text-white" data-aos="flip-right" data-aos-duration="1000">WELCOME TO</p>
+						<div class="w3-hide-small" style="background-color: rgba(0, 0, 0, 0.198);
+						backdrop-filter: blur(5px);" data-aos="zoom-in" data-aos-delay="5000" data-aos-duration="1500">
+							<h1 class="w3-jumbo w3-text-white "style="padding: 25px;"><span class=" w3-text-light-grey" data-aos="zoom-in-down" data-aos-delay="1000" data-aos-duration="1000">SafeConnect</span><span class=" w3-black w3-opacity-min w3-padding" data-aos="" data-aos-delay="2500" data-aos-duration="1500"><b>X</b></span> </h1></div>
+						</div>
+						<div class="w3-display-topmiddle  w3-center w3-padding" style="margin-top: 150px;" >
+						
+						<div class="w3-hide-medium w3-hide-large" style="background-color: rgba(0, 0, 0, 0.198);
+						backdrop-filter: blur(5px);" data-aos="zoom-in" data-aos-delay="1000" data-aos-duration="2500">
+							<h1 class="w3-xxlarge w3-text-white "style="padding: 25px;"><span class=" w3-text-light-grey" data-aos="zoom-in-down" data-aos-delay="1000" data-aos-duration="1000">SafeConnect</span><span class=" w3-black w3-opacity-min w3-padding" data-aos="" data-aos-delay="2500" data-aos-duration="1500"><b>X</b></span> </h1></div>
+						</div>
+						<div class="w3-padding-32 w3-content w3-display-middle" data-aos="zoom-in" data-aos-delay="1000" data-aos-duration="500" ;">
+						<div  class="w3-padding-32 w3-content w3-display-middle w3-large w3-center w3-text-white w3-hide-small" style="font-style: italic; background-color: rgba(0, 0, 0, 0.185);
+						backdrop-filter: blur(5px); position: absolute; " >
+							<p class="w3-content" style="width: 700px;">Under Construction/Prelaunch - Soon to come : Safe Connections and Services for all things crypto/web3/nft/metaverse all powered by our native coin (presale info in telegram group)
+								<br> JOIN US!</p>
+						</div><br><br>
+						</div>
+						<div style="top:0;" data-aos="zoom-in" data-aos-delay="1000" data-aos-duration="500">
+						<div  class="w3-padding-32 w3-display-middle w3-large w3-center w3-text-white w3-hide-medium w3-hide-large " style="margin-top: 550px;font-style: italic; background-color: rgba(0, 0, 0, 0.185);
+						backdrop-filter: blur(5px);" >
+							<p data-aos="zoom-in" data-aos-delay="1000" data-aos-duration="500">Under Construction/Prelaunch - Soon to come : Safe Connections and Services for all things crypto/web3/nft/metaverse all powered by our native coin (presale info in telegram group)
+								<br> JOIN US!</p>
+						</div><br><br>
+						</div>
+
+
+						<div class="w3-display-topleft " style="z-index: 3000000000000; color: #FFF; display: flex; margin-bottom: 70px; margin-left: 1px; margin-top: 6px; top: 0;">
+						<button id="connz" style=" font-size: 23px; background-color: #120044; color: #FFF; padding-left: 10px; padding-right: 10px; border-radius: 10px; border-color: greenyellow 1px solid;"  > CONNECT</button>
+						
+						
+						</div>
+					<div class="w3-display-middle w3-hide-small w3-hide medium w3-hide-large" style="z-index: 3; color: #FFF; display: flex; margin-bottom: 70px;   margin-top: 230px;">
+						
+						
+						<button id="mintoza" style="margin-right: 50 px; font-size: 23px; background-color: #120044; color: #FFF; padding-left: 10px; padding-right: 10px; border-radius: 10px;" > MINT NFT </button>
+					
+					</div>
+					<div class="w3-display-topleft w3-hide-small"  style="z-index: 4; color: #FFF; position: fixed; margin-top: 10px;" >  <p>WALLET - <span id="wallet-address" ></span></p></div>
+					
+						<script type="text/javascript">
+							var account = null;
+							var contract = null;
+						
+					
+							const ABI = [
+					{
+						"inputs": [
+							{
+								"internalType": "string",
+								"name": "_name",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "_symbol",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "_initBaseURI",
+								"type": "string"
+							}
+						],
+						"stateMutability": "nonpayable",
+						"type": "constructor"
+					},
+					{
+						"anonymous": false,
+						"inputs": [
+							{
+								"indexed": true,
+								"internalType": "address",
+								"name": "owner",
+								"type": "address"
+							},
+							{
+								"indexed": true,
+								"internalType": "address",
+								"name": "approved",
+								"type": "address"
+							},
+							{
+								"indexed": true,
+								"internalType": "uint256",
+								"name": "tokenId",
+								"type": "uint256"
+							}
+						],
+						"name": "Approval",
+						"type": "event"
+					},
+					{
+						"anonymous": false,
+						"inputs": [
+							{
+								"indexed": true,
+								"internalType": "address",
+								"name": "owner",
+								"type": "address"
+							},
+							{
+								"indexed": true,
+								"internalType": "address",
+								"name": "operator",
+								"type": "address"
+							},
+							{
+								"indexed": false,
+								"internalType": "bool",
+								"name": "approved",
+								"type": "bool"
+							}
+						],
+						"name": "ApprovalForAll",
+						"type": "event"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "address",
+								"name": "to",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "tokenId",
+								"type": "uint256"
+							}
+						],
+						"name": "approve",
+						"outputs": [],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "address",
+								"name": "to",
+								"type": "address"
+							}
+						],
+						"name": "mint",
+						"outputs": [],
+						"stateMutability": "payable",
+						"type": "function"
+					},
+					{
+						"anonymous": false,
+						"inputs": [
+							{
+								"indexed": true,
+								"internalType": "address",
+								"name": "previousOwner",
+								"type": "address"
+							},
+							{
+								"indexed": true,
+								"internalType": "address",
+								"name": "newOwner",
+								"type": "address"
+							}
+						],
+						"name": "OwnershipTransferred",
+						"type": "event"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "bool",
+								"name": "_state",
+								"type": "bool"
+							}
+						],
+						"name": "pause",
+						"outputs": [],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [],
+						"name": "renounceOwnership",
+						"outputs": [],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "address",
+								"name": "from",
+								"type": "address"
+							},
+							{
+								"internalType": "address",
+								"name": "to",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "tokenId",
+								"type": "uint256"
+							}
+						],
+						"name": "safeTransferFrom",
+						"outputs": [],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "address",
+								"name": "from",
+								"type": "address"
+							},
+							{
+								"internalType": "address",
+								"name": "to",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "tokenId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "bytes",
+								"name": "_data",
+								"type": "bytes"
+							}
+						],
+						"name": "safeTransferFrom",
+						"outputs": [],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "address",
+								"name": "operator",
+								"type": "address"
+							},
+							{
+								"internalType": "bool",
+								"name": "approved",
+								"type": "bool"
+							}
+						],
+						"name": "setApprovalForAll",
+						"outputs": [],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "string",
+								"name": "_newBaseExtension",
+								"type": "string"
+							}
+						],
+						"name": "setBaseExtension",
+						"outputs": [],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "string",
+								"name": "_newBaseURI",
+								"type": "string"
+							}
+						],
+						"name": "setBaseURI",
+						"outputs": [],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "uint256",
+								"name": "_newCost",
+								"type": "uint256"
+							}
+						],
+						"name": "setCost",
+						"outputs": [],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "uint256",
+								"name": "_newmaxMintAmount",
+								"type": "uint256"
+							}
+						],
+						"name": "setmaxMintAmount",
+						"outputs": [],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"anonymous": false,
+						"inputs": [
+							{
+								"indexed": true,
+								"internalType": "address",
+								"name": "from",
+								"type": "address"
+							},
+							{
+								"indexed": true,
+								"internalType": "address",
+								"name": "to",
+								"type": "address"
+							},
+							{
+								"indexed": true,
+								"internalType": "uint256",
+								"name": "tokenId",
+								"type": "uint256"
+							}
+						],
+						"name": "Transfer",
+						"type": "event"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "address",
+								"name": "from",
+								"type": "address"
+							},
+							{
+								"internalType": "address",
+								"name": "to",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "tokenId",
+								"type": "uint256"
+							}
+						],
+						"name": "transferFrom",
+						"outputs": [],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "address",
+								"name": "newOwner",
+								"type": "address"
+							}
+						],
+						"name": "transferOwnership",
+						"outputs": [],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [],
+						"name": "withdraw",
+						"outputs": [],
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "address",
+								"name": "owner",
+								"type": "address"
+							}
+						],
+						"name": "balanceOf",
+						"outputs": [
+							{
+								"internalType": "uint256",
+								"name": "",
+								"type": "uint256"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [],
+						"name": "baseExtension",
+						"outputs": [
+							{
+								"internalType": "string",
+								"name": "",
+								"type": "string"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [],
+						"name": "baseURI",
+						"outputs": [
+							{
+								"internalType": "string",
+								"name": "",
+								"type": "string"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [],
+						"name": "cost",
+						"outputs": [
+							{
+								"internalType": "uint256",
+								"name": "",
+								"type": "uint256"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "uint256",
+								"name": "tokenId",
+								"type": "uint256"
+							}
+						],
+						"name": "getApproved",
+						"outputs": [
+							{
+								"internalType": "address",
+								"name": "",
+								"type": "address"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "address",
+								"name": "owner",
+								"type": "address"
+							},
+							{
+								"internalType": "address",
+								"name": "operator",
+								"type": "address"
+							}
+						],
+						"name": "isApprovedForAll",
+						"outputs": [
+							{
+								"internalType": "bool",
+								"name": "",
+								"type": "bool"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [],
+						"name": "maxMintAmount",
+						"outputs": [
+							{
+								"internalType": "uint256",
+								"name": "",
+								"type": "uint256"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [],
+						"name": "maxSupply",
+						"outputs": [
+							{
+								"internalType": "uint256",
+								"name": "",
+								"type": "uint256"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [],
+						"name": "name",
+						"outputs": [
+							{
+								"internalType": "string",
+								"name": "",
+								"type": "string"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [],
+						"name": "owner",
+						"outputs": [
+							{
+								"internalType": "address",
+								"name": "",
+								"type": "address"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "uint256",
+								"name": "tokenId",
+								"type": "uint256"
+							}
+						],
+						"name": "ownerOf",
+						"outputs": [
+							{
+								"internalType": "address",
+								"name": "",
+								"type": "address"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [],
+						"name": "paused",
+						"outputs": [
+							{
+								"internalType": "bool",
+								"name": "",
+								"type": "bool"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "bytes4",
+								"name": "interfaceId",
+								"type": "bytes4"
+							}
+						],
+						"name": "supportsInterface",
+						"outputs": [
+							{
+								"internalType": "bool",
+								"name": "",
+								"type": "bool"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [],
+						"name": "symbol",
+						"outputs": [
+							{
+								"internalType": "string",
+								"name": "",
+								"type": "string"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "uint256",
+								"name": "index",
+								"type": "uint256"
+							}
+						],
+						"name": "tokenByIndex",
+						"outputs": [
+							{
+								"internalType": "uint256",
+								"name": "",
+								"type": "uint256"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "address",
+								"name": "owner",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "index",
+								"type": "uint256"
+							}
+						],
+						"name": "tokenOfOwnerByIndex",
+						"outputs": [
+							{
+								"internalType": "uint256",
+								"name": "",
+								"type": "uint256"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "uint256",
+								"name": "tokenId",
+								"type": "uint256"
+							}
+						],
+						"name": "tokenURI",
+						"outputs": [
+							{
+								"internalType": "string",
+								"name": "",
+								"type": "string"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [],
+						"name": "totalSupply",
+						"outputs": [
+							{
+								"internalType": "uint256",
+								"name": "",
+								"type": "uint256"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"inputs": [
+							{
+								"internalType": "address",
+								"name": "_owner",
+								"type": "address"
+							}
+						],
+						"name": "walletOfOwner",
+						"outputs": [
+							{
+								"internalType": "uint256[]",
+								"name": "",
+								"type": "uint256[]"
+							}
+						],
+						"stateMutability": "view",
+						"type": "function"
+					}
+				];
+						
+						const ADDRESS = "0xFC4dB84Ed71E338863B87Dd830E89C4775750a45";
+						document.getElementById('connz').onclick = () =>   (async () => {
+						if (window.ethereum) {
+							await window.ethereum.send('eth_requestAccounts');
+							window.web3 = new Web3(window.ethereum);
+					
+							var accounts = await web3.eth.getAccounts();
+							account = accounts[0];
+							document.getElementById('wallet-address').textContent = account;
+					
+							contract = new web3.eth.Contract(ABI, ADDRESS);
+					
+							document.getElementById('mintoza').onclick = () => {
+							contract.methods.mint(account).send({ from: account, value: 20000000000000000})
+							};
+						}
+						} )();
+					
+						
+					
+					
+					
+					
+					
+					
+						</script>
+
+
+						<div  class="w3-display-bottommiddle w3-hide-large w3-hide-medium" style="margin-bottom: 70px; z-index: 4;" >
+							<div class="btn btn-two">
+							<a href="https://telegram.me/SafeConnectX"  target="_blank"><span><strong>JOIN US!</strong></span></a> 
+							</div>
+						</div>
+
+					</header>
+
+				
+				
+					<div  id="aboutz" >
+						<div class="w3-container w3-content  w3-center " ><br><br>
+							<br><br><br>
+							<h3 class=" w3-content w3-center w3-border-black w3-padding-16 w3-xxxlarge w3-text-white w3-padding" data-aos="zoom-out-down" data-aos-duration="1000" style="background-color: rgba(0, 0, 0, 0.185);
+							backdrop-filter: blur(5px);">SAFE CONNECTIONS - FOR ALL THINGS BLOCKCHAIN</h3><br><br><br><br>
+							
+							
+
+							<p class="w3-content w3-xlarge w3-center w3-text-light-grey w3-padding" data-aos="zoom-out-up" data-aos-delay="500" data-aos-duration="1000" style="background-color: rgba(0, 0, 0, 0.185);
+							backdrop-filter: blur(5px);">Im not saying i know how to do all this ... <br>
+								but i know our community does...
+								this idea comes from experience in this scene.
+									And from lots n lots of interactions meetings dealings friendships lies scams frauds emotions .  After all these experiences i know whats needed and what i would personally use - and the investors and newbys too ..  And after being a "dev" for multiple projects, some of my own,  i know what projects need too .  Its a dangerous and risky place,  and with a trustworthy source of information and connections,  it would lead to a more trusting and successful network . Through losing tons n tons of money to scams, and badplayers, and rugpulls - i have gained very valuable knowledge that you cant read or buy or learn, other than by experience.  And once you weed throught the bad , and have found the true and trusted and tested safe connections, you can have a much better blockchain experience . Thats what this will be  . SafeConnectX :) 
+							</p>
+							</div>
+						
+					</div>
+					</div><br><br>
+					<section class="main w3-row w3-hide-medium w3-hide-small" id="services" style=" padding: 5rem;"><BR>
+						<h1 data-aos="fade-right" data-aos-delay="1500" data-aos-duration="1000" style="color: rgb(255, 255, 255); font-size: 20px; margin-left: 50px; font-weight: bold;  " >  OUR SERVICES </h1>
+						<h1 data-aos="zoom-in" data-aos-delay="500" data-aos-duration="500" class="w3-center w3-content" style="color: white; font-size: 60px; font-weight: bold;  background-color: rgba(0, 0, 0, 0.185);
+						backdrop-filter: blur(5px);">SAFU CRYPTO/NFT/META</h1><BR></BR>
+					<div data-aos="fade-up"
+					data-aos-anchor-placement="bottom-bottom" data-aos-duration="1000" data-aos-delay="500">
+						<div  class=" wrap--1 w3-col s4" style="padding-top: 40px;  transform-style: preserve-3d;  
+						transform: perspective(100rem);">
+							<div class="container container--1">
+								<div>
+								<h3></h3><br>
+								<p></p>
+								</div>
+							</div>
+						</div>
+						
+						<div class="wrap--2 w3-col s4" style="padding-top: 40px;  transform-style: preserve-3d;
+						transform: perspective(100rem);">
+							<div class="container container--2">
+								<div>
+								<h3></h3>
+								<p></p>
+								</div>
+							</div>
+						</div>
+					
+						
+						<div class=" wrap--3 w3-col s4" style="padding-top: 40px;  transform-style: preserve-3d;
+						transform: perspective(100rem);">
+							<div class="container container--3">
+							<div>
+								<h3></h3>
+								<p></p>
+							</div>
+							</div>
+						</div>
+					</div> 
+					</div>
+					
+						</section>
+						<div class="section"  data-bg="MidnightBlue">
+						<section class=" w3-center  w3-hide-large" style="max-width: 90%; ">
+							<h1 class="w3-center" style="color: white; font-size: 40px; font-weight: bold; background-color: rgba(0, 0, 0, 0.185);
+							backdrop-filter: blur(5px);">SAFU CRYPTO/NFT/META</h1>
+					
+							<div class=" wrap--1 wrap w3-center " style="padding-top: 40px; ">
+							<div class="container container--1 w3-center ">
+								<div>
+								<h3></h3>
+								<p></p>
+								</div>
+							</div>
+							</div>
+						
+						
+							<div class="wrap--2 wrap" style="padding-top: 40px;">
+							<div class="container container--2">
+								<div>
+								<h3></h3>
+								<p></p>
+								</div>
+						
+							</div>
+							</div>
+						
+							<div class=" wrap--3 wrap" style="padding-top: 40px;">
+							<div class="container container--3">
+								<div>
+								<h3></h3>
+								<p></p>
+								</div>
+							</div>
+							
+							</div>
+						
+						</section>
+					<div style="border-bottom: solid 2px rgba(255, 255, 255, 0.178)" data-aos="fade-right" data-aos-delay="500" data-aos-duration="500"></div><br><br><br><br><br><br><br><br><br>
+					
+
+				
+					<div class="section" data-bg="Indigo" >
+						<div class="w3-container" >
+							<div class="w3-content w3-text-white w3-center">
+								<div class="w3-twothird">
+									<h1  class=" w3-xxxlarge w3-border-black w3-text-white w3-padding w3-center" style="background-color: rgba(0, 0, 0, 0.185);
+									backdrop-filter: blur(5px);"  >
+									<span data-aos="fade-right" data-aos-delay="500" data-aos-duration="1500">Oustascam.com </span>  <span data-aos="fade-left" data-aos-delay="1500" data-aos-duration="500" > - Coming Soon</span> 
+									</h1>
+									<h1  class="w3-xxxlarge w3-border-black w3-text-white w3-padding w3-center" data-aos="fade-down" data-aos-duration="1000" >
+									
+									</h1>
+								<p class="w3-center w3-xlarge w3-padding-64  w3-text-white" data-aos="fade-right" data-aos-delay="500" data-aos-duration="1000" style="background-color: rgba(0, 0, 0, 0.185);
+								backdrop-filter: blur(5px);">
+								<strong>V1 site in development now  <br>  Crypto's  NO scam instagram (clone)
+										all the fun of shilling  + all the fuctions of IG
+										Fun, Interactive, Fair, Unbiased rankings
+										Influencer onboarding, Bounties for known scammers
+										ScamSnitcher - snitch on scams, and recieve rewards</strong>
+								</p>
+								</div>  <br><br><br><br>
+								<div class="w3-third">
+								<img src="img/safuservices.png"  class="w3-image" data-aos="fade-left" data-aos-delay="500" data-aos-duration="1000"
+								data-aos-anchor-placement="top-bottom" style="margin-left: 20px;">
+								<br><br><br><br><br><br><br>
+								</div>  
+							
+
+							</div> 
+						</div>
+
+					</div>
+					
+					
+					</div>
+					<div class="w3-container" id="roadmap">
+						<h1 data-aos="zoom-in"  data-aos-duration="500" class="w3-center " style="color: white; max-width: 50%; margin-left: 25%; font-size: 60px; font-weight: bold;  background-color: rgba(0, 0, 0, 0.185);
+						backdrop-filter: blur(5px);">SAFECONNECT.X ROADMAP</h1><br><br><br>
+						<p class="w3-content w3-xlarge w3-center w3-text-light-grey w3-padding" data-aos="zoom-out-up" data-aos-delay="500" data-aos-duration="1000" style="background-color: rgba(0, 0, 0, 0.185);
+						backdrop-filter: blur(5px);">I'm not one to believe that the future will be as you always expect, nor rely upon it being so. <br> So here's the roadmap, no overpromises - all deliverable and will be delivered with a smile :)
+						</p><br><br>
+						<div class="timeline">
+				
+							<h2 class="timeline__item timeline__item--year" data-aos="zoom-in"  data-aos-duration="500">PHASE 1</h2>
+							
+							<div class="timeline__item" style="color: white;    background-color: rgba(0, 0, 0, 0.185);
+							backdrop-filter: blur(5px);" data-aos="fade-right" data-aos-delay="500" data-aos-duration="500">
+							<h3 class="timeline__title" style="font-family: 'Titillium Web', sans-serif; font-weight: 200; ">- Social media creation <br>
+														- Purchase domains <br>
+														- Safeconnect.x platform launch <br>
+														- Giveaways/Contests for community building <br>
+														- Create token contract <br>
+														- Social app launch (OUSTASCAM.COM) <br>
+														- Announce initial partnerships/collaborations <br>
+														- Safeconnect NFT #1 connectXcard <br>
+														- Team 2.0 - Increase admin n# , doxxed team, legal team
+																
+							
+							</h3>
+							</div>
+							
+							<h2 class="timeline__item timeline__item--year" data-aos="zoom-in"  data-aos-duration="500">PHASE 2</h2>
+							
+							<div class="timeline__item" style="color: white;    background-color: rgba(0, 0, 0, 0.185);
+							backdrop-filter: blur(5px);" data-aos="fade-left" data-aos-delay="500" data-aos-duration="500">
+							<h3 class="timeline__title" style="font-family: 'Titillium Web', sans-serif; font-weight: 200; " >- Oustascam v2 DYOR Hub <br>
+								- Social platform, onboarding <br>
+								- Safeconnect NFT #2 Early investor gift <br>
+								- Safeconnect NFT Marketplace/launchpad <br>
+								- Initial marketing(Influencer campaigns, AMA tours, live events)
+							</h3>
+							</div>
+							
+							<h2 class="timeline__item timeline__item--year" data-aos="zoom-in"  data-aos-duration="500">PHASE 3</h2>
+							
+							<div class="timeline__item" style="color: white;    background-color: rgba(0, 0, 0, 0.185);
+							backdrop-filter: blur(5px);" data-aos="fade-right" data-aos-delay="500" data-aos-duration="500">
+							<h3 class="timeline__title" style="font-family: 'Titillium Web', sans-serif; font-weight: 200; ">- Safeconnect NFT #3  public onsale offering<br>
+								- Metaverse NFT Gallery  <br>
+								- Launch on Pancakeswap <br>
+								- Launch Party <br>
+								- Call groups
+							</h3>
+							</div>
+							
+						
+							
+						</div>
+
+					</div>
+					<h3 class=" w3-content w3-container w3-center w3-border-black w3-padding-16 w3-xxxlarge w3-text-white w3-padding" data-aos="zoom-out-down" data-aos-duration="1000" style="background-color: rgba(0, 0, 0, 0);
+					backdrop-filter: blur(5px); max-width: 30%;" data-aos="zoom-in-down" data-aos-duration="1000">TOKENOMICS</h3><br><br><br>
+						<h3 class=" w3-content w3-container w3-center w3-border-black w3-padding-16 w3-xlarge w3-text-white w3-padding" data-aos="zoom-out-down" data-aos-duration="1000" style="background-color: rgba(0, 0, 0, 0);
+						backdrop-filter: blur(5px); max-width: 20%;" data-aos="zoom-in-down" data-aos-duration="1000">BUY TAX</h3>
+					
+					<div class="w3-container w3-content" style="  display: flex;
+					flex-flow: row wrap;
+					align-items: center;
+					justify-content: center;" > 
+
+						
+						<div class="pie" data-aos="fade-right" data-aos-delay="500" data-aos-duration="1000" >
+							<svg class="pie__canvas" viewbox="0 0 34 34" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+								<circle class="pie__frame" cx="17" cy="17" r="16" />
+								<circle  style=" stroke: rgb(72, 255, 0);
+								stroke-width: 2.5px;
+								stroke-linecap: round;
+								fill: none;" cx="17" cy="17" r="16" stroke-dasharray="40 100" />
+							</svg>
+						
+							<div class="pie__text">
+								<strong>LIQUIDITY-4%</strong>
+							</div>
+						</div>
+						
+						<div class="pie" data-aos="fade-down" data-aos-delay="1000" data-aos-duration="1000">
+							<svg class="pie__canvas" viewbox="0 0 34 34" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+								<circle class="pie__frame" cx="17" cy="17" r="16" />
+								<circle  style=" stroke: rgb(72, 255, 0);
+								stroke-width: 2.5px;
+								stroke-linecap: round;
+								fill: none;" cx="17" cy="17" r="16" stroke-dasharray="40 100" />
+							</svg>
+						
+							<div class="pie__text">
+								<strong>MARKETING-4%</strong>
+							</div>
+						</div>
+						
+						<div class="pie" data-aos="fade-left" data-aos-delay="1500" data-aos-duration="1000">
+							<svg class="pie__canvas" viewbox="0 0 34 34" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+								<circle class="pie__frame" cx="17" cy="17" r="16" />
+								<circle  style=" stroke: rgb(72, 255, 0);
+								stroke-width: 2.5px;
+								stroke-linecap: round;
+								fill: none;" cx="17" cy="17" r="16" stroke-dasharray="20 100" />
+							</svg>
+						
+							<div class="pie__text">
+								<strong>TEAM-2%</strong>
+							</div>
+						</div>
+						
+
+						
+						
+						
+
+					</div><br><br><br><br><br><br>
+					<h3 class=" w3-content w3-container w3-center w3-border-black w3-padding-16 w3-xlarge w3-text-white w3-padding" data-aos="zoom-out-down" data-aos-duration="1000" style="background-color: rgba(0, 0, 0, 0);
+						backdrop-filter: blur(5px); max-width: 20%;" data-aos="zoom-in-down" data-aos-duration="1000">SELL TAX</h3>
+					
+					<div class="w3-container w3-content" style="  display: flex;
+																flex-flow: row wrap;
+																align-items: center;
+																justify-content: center;" > 
+
+						
+						<div class="pie" data-aos="fade-right" data-aos-delay="500" data-aos-duration="1000" >
+							<svg class="pie__canvas" viewbox="0 0 34 34" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+								<circle class="pie__framez" cx="17" cy="17" r="16" />
+								<circle     style="stroke: rgb(246, 0, 0);
+								stroke-width: 2.5px;
+								stroke-linecap: round;
+								fill: none;" cx="17" cy="17" r="16" stroke-dasharray="40 100" />
+							</svg>
+						
+							<div class="pie__text">
+								<strong>LIQUIDITY-6%</strong>
+							</div>
+						</div>
+						
+						<div class="pie" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1000">
+							<svg class="pie__canvas" viewbox="0 0 34 34" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+								<circle class="pie__framez" cx="17" cy="17" r="16" />
+								<circle style="stroke: rgb(246, 0, 0);
+								stroke-width: 2.5px;
+								stroke-linecap: round;
+								fill: none;" cx="17" cy="17" r="16" stroke-dasharray="47 100" />
+							</svg>
+						
+							<div class="pie__text">
+								<strong>MARKETING-7%</strong>
+							</div>
+						</div>
+						
+						<div class="pie" data-aos="fade-left" data-aos-delay="1500" data-aos-duration="1000">
+							<svg class="pie__canvas" viewbox="0 0 34 34" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+								<circle class="pie__framez" cx="17" cy="17" r="16" />
+								<circle style="stroke: rgb(246, 0, 0);
+								stroke-width: 2.5px;
+								stroke-linecap: round;
+								fill: none;" cx="17" cy="17" r="16" stroke-dasharray="13 100" />
+							</svg>
+						
+							<div class="pie__text">
+								<strong>TEAM-2%</strong>
+							</div>
+						</div>
+						
+
+						
+						
+						
+
+					</div><br><br><br><br><br><br>
+					<h3 class=" w3-content w3-container w3-center w3-border-black w3-padding-16 w3-xlarge w3-text-white w3-padding" data-aos="zoom-out-down" data-aos-duration="1000" style="background-color: rgba(0, 0, 0, 0);
+						backdrop-filter: blur(5px); max-width: 20%;" data-aos="zoom-in-down" data-aos-duration="1000">COIN DISTRIBUTION</h3><br><br>
+						<div class="w3-container w3-content w3-half" >
+							<figure>
+								
+								
+								<svg viewBox="0 0 63.6619772368 63.6619772368">
+									<circle class="pie1" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+									
+									<circle class="pie2" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+									<circle class="pie3" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+									<circle class="pie4" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+									<circle class="pie5" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+									<circle class="pie6" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+
+								</svg>
+
+								
+							</figure>
+							
+							
+
+						</div>
+						<div class="w3-half" >
+							<p> <svg width="100" height="50">
+								<rect x="50" y="20" rx="20" ry="20" width="50" height="50"
+								style="fill:red;stroke:black;stroke-width:5;opacity:0.5; position: relative;" />
+							</svg></p>
+							<p></p>
+
+						</div>
+			</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			<section class="w3-hide-large w3-hide-medium">		
+			
+				
+				
+				<!-- filters -->
+				<svg style="height: -0px;" xmlns="http://www.w3.org/2000/svg" version="1.1">
+					<defs>
+						<filter id="shadowed-goo">
+							
+							<feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+							<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+							<feGaussianBlur in="goo" stdDeviation="3" result="shadow" />
+							<feColorMatrix in="shadow" mode="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 -0.2" result="shadow" />
+							<feOffset in="shadow" dx="1" dy="1" result="shadow" />
+							<feComposite in2="shadow" in="goo" result="goo" />
+							<feComposite in2="goo" in="SourceGraphic" result="mix" />
+						</filter>
+						<filter id="goo">
+							<feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+							<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+							<feComposite in2="goo" in="SourceGraphic" result="mix" />
+						</filter>
+					</defs>
+				</svg>
+				
+				<div class="w3-top w3-hide-medium w3-hide-large" data-aos="fade-down"   data-aos-duration="1000" style="width: 100vw;">
+					<ul class="phone">
+			
+					
+
+					<li><a href="https://twitter.com/SafeconnectX" target="_blank"><i class="fab fa-twitter" style="font-size:30px; color: #1DA1F2;"></i></a></li>
+					<li><a href="https://discord.gg/bPeY5nYwze" target="_blank"><i class="fab fa-discord" style="font-size:30px; color: #5865F2; " ></i></a></li>
+					<li><a href="https://t.me/SafeConnectX " target="_blank"><i class="fab fa-telegram" style="font-size:30px; color: #229ED9;"></i></a></li>
+					
+					
+				</ul>
+			
 				</div>
-			</div>
-		  </div>
-	  
-		
-		  <div class=" wrap--3 w3-col s4" style="padding-top: 40px;  transform-style: preserve-3d;
-		  transform: perspective(100rem);">
-			<div class="container container--3">
-			  <div>
-				 <h3></h3>
-				 <p></p>
-			   </div>
-			</div>
-		  </div>
-	  </div> 
-	</div>
-	  
+				<video id="backgroundz-video" autoplay loop muted poster="img/coolvid.mp4">
+					<source src="img/coolvid.mp4" type="video/mp4">
+				</video>
+				<header class="w3-display-container  w3-wide" style="height: 100vh; z-index: 20;" >
+				
+				
+					<div class="w3-display-topmiddle  w3-center w3-padding" style="margin-top: 70px;" >
+						<p class="w3-xlarge w3-text-white" data-aos="flip-right" data-aos-duration="1000">WELCOME TO</p></div>
+				
+					<div class="w3-display-topmiddle  w3-center w3-padding" style="margin-top: 150px;" >
+					
+					<div class="w3-hide-medium w3-hide-large" style="background-color: rgba(0, 0, 0, 0.198);
+					backdrop-filter: blur(5px);" data-aos="zoom-in" data-aos-delay="1000" data-aos-duration="2500">
+						<h1 class="w3-xxlarge w3-text-white "style="padding: 25px;"><span class=" w3-text-light-grey" data-aos="zoom-in-down" data-aos-delay="1000" data-aos-duration="1000">SafeConnect</span><span class=" w3-black w3-opacity-min w3-padding" data-aos="" data-aos-delay="2500" data-aos-duration="1500"><b>X</b></span> </h1></div>
+					</div>
+				
+					<div  data-aos="zoom-in" data-aos-delay="1000" data-aos-duration="500">
+						<div  class="w3-padding-32 w3-display-middle w3-large w3-center w3-text-white w3-hide-medium w3-hide-large " style="margin-top: 450px;font-style: italic; background-color: rgba(0, 0, 0, 0.185);
+						backdrop-filter: blur(5px);" >
+							<p data-aos="zoom-in" data-aos-delay="1000" data-aos-duration="500">Under Construction/Prelaunch - Soon to come : Safe Connections and Services for all things crypto/web3/nft/metaverse all powered by our native coin (presale info in telegram group)
+								<br> JOIN US!</p>
+						</div><br><br>
+					</div>
+
+
+					
+
+					<div  class="w3-display-bottommiddle " style="margin-bottom: 70px;" >
+						<div class="btn btn-two">
+						<a href="https://telegram.me/SafeConnectX"  target="_blank"><span><strong>JOIN US!</strong></span></a> 
+						</div>
+					</div>
+
+				</header>
+
+				<div style="border-bottom: solid 1px rgb(123, 123, 123)" data-aos="fade-right" data-aos-delay="500" data-aos-duration="500"></div><br><br><br><br><br>
+			
+			
+					<div class="w3-container w3-content w3-center w3-border-black 		w3-padding-16 " ><br><br>
+						<br><br><br>
+						<h3 class=" w3-xlarge w3-text-white w3-padding" data-aos="zoom-out-down" data-aos-duration="1000" style="background-color: rgba(0, 0, 0, 0.185);
+						backdrop-filter: blur(5px);">SAFE CONNECTIONS - FOR ALL THINGS BLOCKCHAIN</h3><br><br><br><br>
+						
+						
+
+						<p class=" w3-text-light-grey w3-padding" data-aos="zoom-out-up" data-aos-delay="500" data-aos-duration="1000" style="background-color: rgba(0, 0, 0, 0.185);
+						backdrop-filter: blur(5px);">Im not saying i know how to do all this ... <br>
+							but i know our community does...
+							this idea comes from experience in this scene.
+								And from lots n lots of interactions meetings dealings friendships lies scams frauds emotions .  After all these experiences i know whats needed and what i would personally use - and the investors and newbys too ..  And after being a "dev" for multiple projects, some of my own,  i know what projects need too .  Its a dangerous and risky place,  and with a trustworthy source of information and connections,  it would lead to a more trusting and successful network . Through losing tons n tons of money to scams, and badplayers, and rugpulls - i have gained very valuable knowledge that you cant read or buy or learn, other than by experience.  And once you weed throught the bad , and have found the true and trusted and tested safe connections, you can have a much better blockchain experience . Thats what this will be  . SafeConnectX :) 
+						</p>
+					</div>
+					
+				
+				<br><br><br><br><br><br>
+				<div style="border-bottom: solid 1px rgb(123, 123, 123)" data-aos="fade-left" data-aos-delay="500" data-aos-duration="500"></div><br><br><br><br><br>
+			
+					<div class="section"  data-bg="MidnightBlue">
+					<section class="w3-container w3-content  w3-hide-large" style="max-width: 100vw; ">
+						<h1 class="w3-left" data-aos="fade-right" data-aos-delay="1000" data-aos-duration="1000" style="color: rgb(117, 117, 117); font-size: 10px;  font-weight: bold;  " >  OUR SERVICES </h1><br><br>
+						<h1 class="w3-center" style="color: white; font-size: 30px; font-weight: bold; background-color: rgba(0, 0, 0, 0.185);
+						backdrop-filter: blur(5px);"  data-aos="fade-left" data-aos-delay="1000" data-aos-duration="1000">SAFU CRYPTO/NFT/META</h1>
+				
+						<div class=" wrap--1 wrap w3-center " style="padding-top: 40px; "  data-aos="fade-right"  data-aos-duration="1000">
+						<div class="container container--1 w3-center ">
+							<div>
+							<h3></h3>
+							<p></p>
+							</div>
+						</div>
+						</div>
+					
+					
+						<div class="wrap--2 wrap" style="padding-top: 40px;"  data-aos="fade-left" data-aos-delay="500" data-aos-duration="1000">
+						<div class="container container--2">
+							<div>
+							<h3></h3>
+							<p></p>
+							</div>
+					
+						</div>
+						</div>
+					
+						<div class=" wrap--3 wrap" style="padding-top: 40px;"  data-aos="fade-right" data-aos-delay="1000" data-aos-duration="1000">
+						<div class="container container--3">
+							<div>
+							<h3></h3>
+							<p></p>
+							</div>
+						</div>
+						
+						</div>
+					
+					</section><br><br><br><br>
+				<div style="border-bottom: solid 1px rgb(122, 122, 122)" data-aos="fade-right" data-aos-delay="500" data-aos-duration="500"></div><br><br><br><br><br><br><br><br><br>
+				
+
+			
+				<div class="section" data-bg="Indigo" >
+					<div class="w3-container" >
+						<div class="w3-content w3-text-white w3-center">
+							<div class="w3-twothird">
+								<h1  class="  w3-border-black w3-text-white w3-padding w3-center" style="background-color: rgba(0, 0, 0, 0.185);
+								backdrop-filter: blur(5px); font-size: 35px; "  >
+								<span data-aos="fade-right" data-aos-delay="500" data-aos-duration="1500">Oustascam.com </span>  <span data-aos="fade-left" data-aos-delay="1500" data-aos-duration="500" > - Coming Soon</span> 
+								</h1>
+								<h1  class="w3-xxxlarge w3-border-black w3-text-white w3-padding w3-center" data-aos="fade-down" data-aos-duration="1000" >
+								
+								</h1>
+							<p class="w3-center w3-large w3-padding-64  w3-text-white" data-aos="fade-right" data-aos-delay="500" data-aos-duration="1000" style="background-color: rgba(0, 0, 0, 0.185);
+							backdrop-filter: blur(5px);">
+							<strong>V1 site in development now  <br>  Crypto's  NO scam instagram (clone)
+									all the fun of shilling  + all the fuctions of IG
+									Fun, Interactive, Fair, Unbiased rankings
+									Influencer onboarding, Bounties for known scammers
+									ScamSnitcher - snitch on scams, and recieve rewards</strong>
+							</p>
+							</div>  
+							<div class="w3-third">
+							<img src="img/safuservices.png"  class="w3-image" data-aos="fade-left" data-aos-delay="500" data-aos-duration="1000"
+							data-aos-anchor-placement="top-bottom" >
+							<br><br><br><br><br><br><br>
+							</div>  
+						
+
+						</div> 
+					</div>
+
+				</div>
+				
+
+				</div>
+				<div style="border-bottom: solid 1px rgb(123, 123, 123)" data-aos="fade-right" data-aos-delay="500" data-aos-duration="500"></div><br><br><br><br><br>
+			
+				<div class="w3-container " id="roadmap">
+					<h1 data-aos="zoom-in"  data-aos-duration="500" class="w3-center w3-content" style="color: white;  font-size: 35px; font-weight: bold;  background-color: rgba(0, 0, 0, 0.185);
+					backdrop-filter: blur(5px);">SAFECONNECT.X ROADMAP</h1><br><br><br>
+					<p class="w3-content w3-large w3-center w3-text-light-grey w3-padding" data-aos="zoom-out-up" data-aos-delay="500" data-aos-duration="1000" style="background-color: rgba(0, 0, 0, 0.185);
+					backdrop-filter: blur(5px);">I'm not one to believe that the future will be as you always expect, nor rely upon it being so. <br> So here's the roadmap, no overpromises - all deliverable and will be delivered with a smile :)
+					</p><br><br>
+					<div class="timeline">
+			
+						<h2 class="timeline__item timeline__item--year" data-aos="zoom-in"  data-aos-duration="500">PHASE 1</h2>
+						
+						<div class="timeline__item" style="color: white;    background-color: rgba(0, 0, 0, 0.185);
+						backdrop-filter: blur(5px);" data-aos="fade-right" data-aos-delay="500" data-aos-duration="500">
+						<h3 class="timeline__title" style="font-family: 'Titillium Web', sans-serif; font-weight: 200; ">- Social media creation <br>
+													- Purchase domains <br>
+													- Safeconnect.x platform launch <br>
+													- Giveaways/Contests for community building <br>
+													- Create token contract <br>
+													- Social app launch (OUSTASCAM.COM) <br>
+													- Announce initial partnerships/collaborations <br>
+													- Safeconnect NFT #1 connectXcard <br>
+													- Team 2.0 - Increase admin n# , doxxed team, legal team
+															
+						
+						</h3>
+						</div>
+						
+						<h2 class="timeline__item timeline__item--year" data-aos="zoom-in"  data-aos-duration="500">PHASE 2</h2>
+						
+						<div class="timeline__item" style="color: white;    background-color: rgba(0, 0, 0, 0.185);
+						backdrop-filter: blur(5px);" data-aos="fade-left" data-aos-delay="500" data-aos-duration="500">
+						<h3 class="timeline__title" style="font-family: 'Titillium Web', sans-serif; font-weight: 200; " >- Oustascam v2 DYOR Hub <br>
+							- Social platform, onboarding <br>
+							- Safeconnect NFT #2 Early investor gift <br>
+							- Safeconnect NFT Marketplace/launchpad <br>
+							- Initial marketing(Influencer campaigns, AMA tours, live events)
+						</h3>
+						</div>
+						
+						<h2 class="timeline__item timeline__item--year" data-aos="zoom-in"  data-aos-duration="500">PHASE 3</h2>
+						
+						<div class="timeline__item" style="color: white;    background-color: rgba(0, 0, 0, 0.185);
+						backdrop-filter: blur(5px);" data-aos="fade-right" data-aos-delay="500" data-aos-duration="500">
+						<h3 class="timeline__title" style="font-family: 'Titillium Web', sans-serif; font-weight: 200; ">- Safeconnect NFT #3  public onsale offering<br>
+							- Metaverse NFT Gallery  <br>
+							- Launch on Pancakeswap <br>
+							- Launch Party <br>
+							- Call groups
+						</h3>
+						</div>
+						
+					
+						
+					</div>
+
+				</div><br><br><br><br><br><br>
+				<div style="border-bottom: solid 1px rgb(123, 123, 123)" data-aos="fade-right" data-aos-delay="500" data-aos-duration="500"></div><br><br><br><br><br>
+			
+				<h3 class=" w3-content w3-container w3-center w3-border-black w3-padding-16  w3-text-white w3-padding" data-aos="zoom-out-down" data-aos-duration="1000" style="background-color: rgba(141, 141, 141, 0);
+				backdrop-filter: blur(5px); font-size: 35px;" data-aos="zoom-in-down" data-aos-duration="1000">TOKENOMICS</h3><br><br><br>
+					<h3 class=" w3-content w3-container w3-center w3-border-black w3-padding-16 w3-xlarge w3-text-white w3-padding" data-aos="zoom-out-down" data-aos-duration="1000" style="background-color: rgba(0, 0, 0, 0);
+					backdrop-filter: blur(5px); width: 60%;" data-aos="zoom-in-down" data-aos-duration="1000">BUY TAX</h3>
+				
+				<div class="w3-container w3-content" style="  display: flex;
+				flex-flow: row wrap;
+				align-items: center;
+				justify-content: center; "  > 
+
+					
+					<div class="pie" data-aos="fade-right" data-aos-delay="500" data-aos-duration="1000" style="background-color: rgba(0, 0, 0, 0);
+					backdrop-filter: blur(5px); border-radius: 50%;">
+						<svg class="pie__canvas" viewbox="0 0 34 34" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+							<circle class="pie__frame" cx="17" cy="17" r="16" />
+							<circle  style=" stroke: rgb(72, 255, 0);
+							stroke-width: 2.5px;
+							stroke-linecap: round;
+							fill: none;" cx="17" cy="17" r="16" stroke-dasharray="40 100" />
+						</svg>
+					
+						<div class="pie__text">
+							<strong>LIQUIDITY-4%</strong>
+						</div>
+					</div>
+					
+					<div class="pie" data-aos="fade-down" data-aos-delay="1000" data-aos-duration="1000" style="background-color: rgba(0, 0, 0, 0);
+					backdrop-filter: blur(5px);  border-radius: 50%;">
+						<svg class="pie__canvas" viewbox="0 0 34 34" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+							<circle class="pie__frame" cx="17" cy="17" r="16" />
+							<circle  style=" stroke: rgb(72, 255, 0);
+							stroke-width: 2.5px;
+							stroke-linecap: round;
+							fill: none;" cx="17" cy="17" r="16" stroke-dasharray="40 100" />
+						</svg>
+					
+						<div class="pie__text">
+							<strong>MARKETING-4%</strong>
+						</div>
+					</div>
+					
+					<div class="pie" data-aos="fade-left" data-aos-delay="1500" data-aos-duration="1000" style="background-color: rgba(0, 0, 0, 0);
+					backdrop-filter: blur(5px);  border-radius: 50%;">
+						<svg class="pie__canvas" viewbox="0 0 34 34" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+							<circle class="pie__frame" cx="17" cy="17" r="16" />
+							<circle  style=" stroke: rgb(72, 255, 0);
+							stroke-width: 2.5px;
+							stroke-linecap: round;
+							fill: none;" cx="17" cy="17" r="16" stroke-dasharray="20 100" />
+						</svg>
+					
+						<div class="pie__text">
+							<strong>TEAM-2%</strong>
+						</div>
+					</div>
+					
+
+					
+					
+					
+
+				</div><br><br><br><br><br><br>
+				<h3 class=" w3-content w3-container w3-center w3-border-black w3-padding-16 w3-xlarge w3-text-white w3-padding" data-aos="zoom-out-down" data-aos-duration="1000" style="background-color: rgba(0, 0, 0, 0);
+					backdrop-filter: blur(5px); width: 60%;" data-aos="zoom-in-down" data-aos-duration="1000">SELL TAX</h3>
+				
+				<div class="w3-container w3-content" style="  display: flex;
+															flex-flow: row wrap;
+															align-items: center;
+															justify-content: center;" > 
+
+					
+					<div class="pie" data-aos="fade-right" data-aos-delay="500" data-aos-duration="1000" style="background-color: rgba(0, 0, 0, 0);
+					backdrop-filter: blur(5px);  border-radius: 50%;">
+						<svg class="pie__canvas" viewbox="0 0 34 34" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+							<circle class="pie__framez" cx="17" cy="17" r="16" />
+							<circle     style="stroke: rgb(246, 0, 0);
+							stroke-width: 2.5px;
+							stroke-linecap: round;
+							fill: none;" cx="17" cy="17" r="16" stroke-dasharray="40 100" />
+						</svg>
+					
+						<div class="pie__text">
+							<strong>LIQUIDITY-6%</strong>
+						</div>
+					</div>
+					
+					<div class="pie" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1000" style="background-color: rgba(0, 0, 0, 0);
+					backdrop-filter: blur(5px);  border-radius: 50%;">
+						<svg class="pie__canvas" viewbox="0 0 34 34" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+							<circle class="pie__framez" cx="17" cy="17" r="16" />
+							<circle style="stroke: rgb(246, 0, 0);
+							stroke-width: 2.5px;
+							stroke-linecap: round;
+							fill: none;" cx="17" cy="17" r="16" stroke-dasharray="47 100" />
+						</svg>
+					
+						<div class="pie__text">
+							<strong>MARKETING-7%</strong>
+						</div>
+					</div>
+					
+					<div class="pie" data-aos="fade-left" data-aos-delay="1500" data-aos-duration="1000" style="background-color: rgba(0, 0, 0, 0);
+					backdrop-filter: blur(5px);  border-radius: 50%;">
+						<svg class="pie__canvas" viewbox="0 0 34 34" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+							<circle class="pie__framez" cx="17" cy="17" r="16" />
+							<circle style="stroke: rgb(246, 0, 0);
+							stroke-width: 2.5px;
+							stroke-linecap: round;
+							fill: none;" cx="17" cy="17" r="16" stroke-dasharray="13 100" />
+						</svg>
+					
+						<div class="pie__text">
+							<strong>TEAM-2%</strong>
+						</div>
+					</div>
+					
+
+					
+					
+					
+
+				</div><br><br><br><br><br><br>
+				<h3 class=" w3-content w3-container w3-center w3-border-black w3-padding-16  w3-text-white w3-padding" data-aos="zoom-out-down" data-aos-duration="1000" style="background-color: rgba(0, 0, 0, 0);
+					backdrop-filter: blur(5px);font-size: 35px;" data-aos="zoom-in-down" data-aos-duration="1000">COIN DISTRIBUTION</h3><br><br>
+					<div class="w3-container w3-content "  >
+						<figure class="simu">
+							
+							
+							<svg viewBox="0 0 63.6619772368 63.6619772368">
+								<circle class="pie1" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+								
+								<circle class="pie2" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+								<circle class="pie3" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+								<circle class="pie4" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+								<circle class="pie5" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+								<circle class="pie6" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+
+							</svg>
+
+							
+						</figure>
+						
+						
+
+					</div>
+					<div class=" w3-container w3-content" style="margin-top: 190px;">
+						<p> <svg width="100" height="50">
+							<rect x="50" y="20" rx="20" ry="20" width="50" height="50"
+							style="fill:red;stroke:black;stroke-width:5;opacity:0.5; position: relative;" />
+						</svg></p>
+						<p></p>
+
+					</div>
 		</section>
-		<div class="section"  data-bg="MidnightBlue">
-		  <section class="maine w3-center  w3-hide-large" style="max-width: 90%; ">
-			<h1 class="w3-center" style="color: white; font-size: 40px; font-weight: bold; background-color: rgba(0, 0, 0, 0.185);
-			backdrop-filter: blur(5px);">SAFU CRYPTO/NFT/META</h1>
-	
-			<div class=" wrap--1 wrap w3-center " style="padding-top: 40px; ">
-			  <div class="container container--1 w3-center ">
-				<div>
-				  <h3></h3>
-				  <p></p>
-				</div>
-			 </div>
-			  </div>
-		 
-		  
-			<div class="wrap--2 wrap" style="padding-top: 40px;">
-			  <div class="container container--2">
-				<div>
-				  <h3></h3>
-				  <p></p>
-				</div>
-		   
-			  </div>
-			</div>
-		  
-			<div class=" wrap--3 wrap" style="padding-top: 40px;">
-			  <div class="container container--3">
-				<div>
-				  <h3></h3>
-				  <p></p>
-				</div>
-			 </div>
-			
-			</div>
-		  
-		  </section>
-    <div style="border-bottom: solid 2px rgba(255, 255, 255, 0.178)" data-aos="fade-right" data-aos-delay="500" data-aos-duration="500"></div><br><br><br><br><br><br><br><br><br>
-    
+					<script>
+					const cursor = document.querySelector('.cursor');
+					document.addEventListener('mousemove', e => {
+						cursor.setAttribute("style", " top: "+(e.pageY -10)+"px; left: "+(e.pageX -10)+"px; ")
+					});
 
-   
-    <div class="section" data-bg="Indigo" >
-        <div class="w3-container" >
-            <div class="w3-content w3-text-white w3-center">
-                <div class="w3-twothird">
-                    <h1  class=" w3-xxxlarge w3-border-black w3-text-white w3-padding w3-center" style="background-color: rgba(0, 0, 0, 0.185);
-					backdrop-filter: blur(5px);"  >
-                       <span data-aos="fade-right" data-aos-delay="500" data-aos-duration="1500">Oustascam.com </span>  <span data-aos="fade-left" data-aos-delay="1500" data-aos-duration="500" > - Coming Soon</span> 
-                    </h1>
-                    <h1  class="w3-xxxlarge w3-border-black w3-text-white w3-padding w3-center" data-aos="fade-down" data-aos-duration="1000" >
-                     
-                    </h1>
-                 <p class="w3-center w3-xlarge w3-padding-64  w3-text-white" data-aos="fade-right" data-aos-delay="500" data-aos-duration="1000" style="background-color: rgba(0, 0, 0, 0.185);
-				 backdrop-filter: blur(5px);">
-                   <strong>V1 site in development now  <br>  Crypto's  NO scam instagram (clone)
-                         all the fun of shilling  + all the fuctions of IG
-                         Fun, Interactive, Fair, Unbiased rankings
-                         Influencer onboarding, Bounties for known scammers
-                         ScamSnitcher - snitch on scams, and recieve rewards</strong>
-                 </p>
-                </div>  
-                <div class="w3-third">
-                   <img src="img/safuservices.png"  class="w3-image" data-aos="fade-left" data-aos-delay="500" data-aos-duration="1000"
-                   data-aos-anchor-placement="top-bottom" style="margin-left: 20px;">
-                   <br><br><br><br><br><br><br>
-                </div>  
-             
+					const cursor2 = document.querySelector('.cursor2');
+					document.addEventListener('mousemove', e => {
+						cursor2.setAttribute("style", " top: "+(e.pageY -10)+"px; left: "+(e.pageX -10)+"px; ")
+					});
 
-            </div> 
-         </div>
-
-    </div>
-    
-          <div style=" position: fixed; z-index: -5;
-          bottom: 0; background-color: rgba(0, 0, 0, 0.383);
-              backdrop-filter: blur(2px); height:50px;">
-            <script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/coinMarquee.js"></script><div id="coinmarketcap-widget-marquee" coins="1,1027,825,1839,5994,6210,1966,11697" currency="USD" theme="dark" transparent="true" show-symbol-logo="true"></div>
-          </div>
-    </div>
-	<div class="w3-container" id="roadmap">
-		<h1 data-aos="zoom-in"  data-aos-duration="500" class="w3-center " style="color: white; max-width: 50%; margin-left: 25%; font-size: 60px; font-weight: bold;  background-color: rgba(0, 0, 0, 0.185);
-		backdrop-filter: blur(5px);">SAFECONNECT.X ROADMAP</h1><br><br><br>
-		   <p class="w3-content w3-xlarge w3-center w3-text-light-grey w3-padding" data-aos="zoom-out-up" data-aos-delay="500" data-aos-duration="1000" style="background-color: rgba(0, 0, 0, 0.185);
-		   backdrop-filter: blur(5px);">I'm not one to believe that the future will be as you always expect, nor rely upon it being so. <br> So here's the roadmap, no overpromises - all deliverable and will be delivered with a smile :)
-		   </p><br><br>
-		<div class="timeline">
-  
-			<h2 class="timeline__item timeline__item--year" data-aos="zoom-in"  data-aos-duration="500">PHASE 1</h2>
-			
-			<div class="timeline__item" style="color: white;    background-color: rgba(0, 0, 0, 0.185);
-			backdrop-filter: blur(5px);" data-aos="fade-right" data-aos-delay="500" data-aos-duration="500">
-			  <h3 class="timeline__title" style="font-family: 'Titillium Web', sans-serif; font-weight: 200; ">- Social media creation <br>
-										  - Purchase domains <br>
-										  - Safeconnect.x platform launch <br>
-										  - Giveaways/Contests for community building <br>
-										  - Create token contract <br>
-										  - Social app launch (OUSTASCAM.COM) <br>
-										  - Announce initial partnerships/collaborations <br>
-										  - Safeconnect NFT #1 connectXcard <br>
-										  - Team 2.0 - Increase admin n# , doxxed team, legal team
-												
-			
-			  </h3>
-			</div>
-			
-			<h2 class="timeline__item timeline__item--year" data-aos="zoom-in"  data-aos-duration="500">PHASE 2</h2>
-			
-			<div class="timeline__item" style="color: white;    background-color: rgba(0, 0, 0, 0.185);
-			backdrop-filter: blur(5px);" data-aos="fade-left" data-aos-delay="500" data-aos-duration="500">
-			  <h3 class="timeline__title" style="font-family: 'Titillium Web', sans-serif; font-weight: 200; " >- Oustascam v2 DYOR Hub <br>
-				- Social platform, onboarding <br>
-				- Safeconnect NFT #2 Early investor gift <br>
-				- Safeconnect NFT Marketplace/launchpad <br>
-				- Initial marketing(Influencer campaigns, AMA tours, live events)
-			  </h3>
-			</div>
-			
-			<h2 class="timeline__item timeline__item--year" data-aos="zoom-in"  data-aos-duration="500">PHASE 3</h2>
-			
-			<div class="timeline__item" style="color: white;    background-color: rgba(0, 0, 0, 0.185);
-			backdrop-filter: blur(5px);" data-aos="fade-right" data-aos-delay="500" data-aos-duration="500">
-			  <h3 class="timeline__title" style="font-family: 'Titillium Web', sans-serif; font-weight: 200; ">- Safeconnect NFT #3  public onsale offering<br>
-				- Metaverse NFT Gallery  <br>
-				- Launch on Pancakeswap <br>
-				- Launch Party <br>
-				- Call groups
-			  </h3>
-			</div>
-			
-		
-			
-		  </div>
-
-	</div>
-	<h3 class=" w3-content w3-container w3-center w3-border-black w3-padding-16 w3-xxxlarge w3-text-white w3-padding" data-aos="zoom-out-down" data-aos-duration="1000" style="background-color: rgba(0, 0, 0, 0);
-	backdrop-filter: blur(5px); max-width: 30%;" data-aos="zoom-in-down" data-aos-duration="1000">TOKENOMICS</h3><br><br><br>
-		<h3 class=" w3-content w3-container w3-center w3-border-black w3-padding-16 w3-xlarge w3-text-white w3-padding" data-aos="zoom-out-down" data-aos-duration="1000" style="background-color: rgba(0, 0, 0, 0);
-		backdrop-filter: blur(5px); max-width: 20%;" data-aos="zoom-in-down" data-aos-duration="1000">BUY TAX</h3>
-	 
-	<div class="w3-container w3-content" style="  display: flex;
-	flex-flow: row wrap;
-	align-items: center;
-	justify-content: center;" > 
-
-		
-		<div class="pie" data-aos="fade-right" data-aos-delay="500" data-aos-duration="1000" >
-			<svg class="pie__canvas" viewbox="0 0 34 34" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
-				<circle class="pie__frame" cx="17" cy="17" r="16" />
-				<circle  style=" stroke: rgb(72, 255, 0);
-				stroke-width: 2.5px;
-				stroke-linecap: round;
-				fill: none;" cx="17" cy="17" r="16" stroke-dasharray="40 100" />
-			</svg>
-		
-			<div class="pie__text">
-				<strong>LIQUIDITY-4%</strong>
-			</div>
-		</div>
-		  
-		<div class="pie" data-aos="fade-down" data-aos-delay="1000" data-aos-duration="1000">
-			<svg class="pie__canvas" viewbox="0 0 34 34" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
-				<circle class="pie__frame" cx="17" cy="17" r="16" />
-				<circle  style=" stroke: rgb(72, 255, 0);
-				stroke-width: 2.5px;
-				stroke-linecap: round;
-				fill: none;" cx="17" cy="17" r="16" stroke-dasharray="40 100" />
-			</svg>
-		
-			<div class="pie__text">
-				<strong>MARKETING-4%</strong>
-			</div>
-		</div>
-		
-		<div class="pie" data-aos="fade-left" data-aos-delay="1500" data-aos-duration="1000">
-			<svg class="pie__canvas" viewbox="0 0 34 34" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
-				<circle class="pie__frame" cx="17" cy="17" r="16" />
-				<circle  style=" stroke: rgb(72, 255, 0);
-				stroke-width: 2.5px;
-				stroke-linecap: round;
-				fill: none;" cx="17" cy="17" r="16" stroke-dasharray="20 100" />
-			</svg>
-		
-			<div class="pie__text">
-				<strong>TEAM-2%</strong>
-			</div>
-		</div>
-		
-
-		
-		
-		  
-
-	</div><br><br><br><br><br><br>
-	<h3 class=" w3-content w3-container w3-center w3-border-black w3-padding-16 w3-xlarge w3-text-white w3-padding" data-aos="zoom-out-down" data-aos-duration="1000" style="background-color: rgba(0, 0, 0, 0);
-		backdrop-filter: blur(5px); max-width: 20%;" data-aos="zoom-in-down" data-aos-duration="1000">SELL TAX</h3>
-	 
-	<div class="w3-container w3-content" style="  display: flex;
-												flex-flow: row wrap;
-												align-items: center;
-												justify-content: center;" > 
-
-		
-		<div class="pie" data-aos="fade-right" data-aos-delay="500" data-aos-duration="1000" >
-			<svg class="pie__canvas" viewbox="0 0 34 34" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
-				<circle class="pie__framez" cx="17" cy="17" r="16" />
-				<circle     style="stroke: rgb(246, 0, 0);
-				stroke-width: 2.5px;
-				stroke-linecap: round;
-				fill: none;" cx="17" cy="17" r="16" stroke-dasharray="40 100" />
-			</svg>
-		
-			<div class="pie__text">
-				<strong>LIQUIDITY-6%</strong>
-			</div>
-		</div>
-		  
-		<div class="pie" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1000">
-			<svg class="pie__canvas" viewbox="0 0 34 34" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
-				<circle class="pie__framez" cx="17" cy="17" r="16" />
-				<circle style="stroke: rgb(246, 0, 0);
-				stroke-width: 2.5px;
-				stroke-linecap: round;
-				fill: none;" cx="17" cy="17" r="16" stroke-dasharray="47 100" />
-			</svg>
-		
-			<div class="pie__text">
-				<strong>MARKETING-7%</strong>
-			</div>
-		</div>
-		
-		<div class="pie" data-aos="fade-left" data-aos-delay="1500" data-aos-duration="1000">
-			<svg class="pie__canvas" viewbox="0 0 34 34" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
-				<circle class="pie__framez" cx="17" cy="17" r="16" />
-				<circle style="stroke: rgb(246, 0, 0);
-				stroke-width: 2.5px;
-				stroke-linecap: round;
-				fill: none;" cx="17" cy="17" r="16" stroke-dasharray="13 100" />
-			</svg>
-		
-			<div class="pie__text">
-				<strong>TEAM-2%</strong>
-			</div>
-		</div>
-		
-
-		
-		
-		  
-
-	</div><br><br><br><br><br><br>
-	<h3 class=" w3-content w3-container w3-center w3-border-black w3-padding-16 w3-xlarge w3-text-white w3-padding" data-aos="zoom-out-down" data-aos-duration="1000" style="background-color: rgba(0, 0, 0, 0);
-		backdrop-filter: blur(5px); max-width: 20%;" data-aos="zoom-in-down" data-aos-duration="1000">COIN DISTRIBUTION</h3><br><br>
-		<div class="w3-container w3-content w3-half" >
-			<figure>
+					</script>
 				
-				
-				  <svg viewBox="0 0 63.6619772368 63.6619772368">
-					  <circle class="pie1" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
-					 
-					  <circle class="pie2" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
-					  <circle class="pie3" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
-					  <circle class="pie4" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
-					  <circle class="pie5" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
-					  <circle class="pie6" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
 
-				  </svg>
+				<script>
+				class parallaxTiltEffect {
 
-				 
-			  </figure>
-			  
-			 
+				constructor({element, tiltEffect}) {
 
-		</div>
-		<div class="w3-half" >
-			<p> <svg width="100" height="50">
-				<rect x="50" y="20" rx="20" ry="20" width="50" height="50"
-				style="fill:red;stroke:black;stroke-width:5;opacity:0.5; position: relative;" />
-			  </svg></p>
-			<p></p>
+				this.element = element;
+				this.container = this.element.querySelector(".container");
+				this.size = [300, 360];
+				[this.w, this.h] = this.size;
 
-		</div>
-    <script>
-      const cursor = document.querySelector('.cursor');
-	document.addEventListener('mousemove', e => {
-		cursor.setAttribute("style", " top: "+(e.pageY -10)+"px; left: "+(e.pageX -10)+"px; ")
-	});
+				this.tiltEffect = tiltEffect;
 
-	const cursor2 = document.querySelector('.cursor2');
-	document.addEventListener('mousemove', e => {
-		cursor2.setAttribute("style", " top: "+(e.pageY -10)+"px; left: "+(e.pageX -10)+"px; ")
-	});
+				this.mouseOnComponent = false;
 
-    </script>
-   
+				this.handleMouseMove = this.handleMouseMove.bind(this);
+				this.handleMouseEnter = this.handleMouseEnter.bind(this);
+				this.handleMouseLeave = this.handleMouseLeave.bind(this);
+				this.defaultStates = this.defaultStates.bind(this);
+				this.setProperty = this.setProperty.bind(this);
+				this.init = this.init.bind(this);
 
-<script>
-  class parallaxTiltEffect {
+				this.init();
+				}
 
-constructor({element, tiltEffect}) {
+				handleMouseMove(event) {
+				const {offsetX, offsetY} = event;
 
-  this.element = element;
-  this.container = this.element.querySelector(".container");
-  this.size = [300, 360];
-  [this.w, this.h] = this.size;
+				let X;
+				let Y;
 
-  this.tiltEffect = tiltEffect;
+				if (this.tiltEffect === "reverse") {
+					X = ((offsetX - (this.w/2)) / 3) / 3;
+					Y = (-(offsetY - (this.h/2)) / 3) / 3;
+				}
 
-  this.mouseOnComponent = false;
+				else if (this.tiltEffect === "normal") {
+					X = (-(offsetX - (this.w/2)) / 3) / 3;
+					Y = ((offsetY - (this.h/2)) / 3) / 3;
+				}
 
-  this.handleMouseMove = this.handleMouseMove.bind(this);
-  this.handleMouseEnter = this.handleMouseEnter.bind(this);
-  this.handleMouseLeave = this.handleMouseLeave.bind(this);
-  this.defaultStates = this.defaultStates.bind(this);
-  this.setProperty = this.setProperty.bind(this);
-  this.init = this.init.bind(this);
+				this.setProperty('--rY', X.toFixed(2));
+				this.setProperty('--rX', Y.toFixed(2));
 
-  this.init();
-}
+				this.setProperty('--bY', (80 - (X/4).toFixed(2)) + '%');
+				this.setProperty('--bX', (50 - (Y/4).toFixed(2)) + '%');
+				}
 
-handleMouseMove(event) {
-  const {offsetX, offsetY} = event;
+				handleMouseEnter() {
+				this.mouseOnComponent = true;
+				this.container.classList.add("container--active");
+				}
 
-  let X;
-  let Y;
+				handleMouseLeave() {
+				this.mouseOnComponent = false;
+				this.defaultStates();
+				}
 
-  if (this.tiltEffect === "reverse") {
-    X = ((offsetX - (this.w/2)) / 3) / 3;
-    Y = (-(offsetY - (this.h/2)) / 3) / 3;
-  }
+				defaultStates() {
+				this.container.classList.remove("container--active");
+				this.setProperty('--rY', 0);
+				this.setProperty('--rX', 0);
+				this.setProperty('--bY', '80%');
+				this.setProperty('--bX', '50%');
+				}
 
-  else if (this.tiltEffect === "normal") {
-    X = (-(offsetX - (this.w/2)) / 3) / 3;
-    Y = ((offsetY - (this.h/2)) / 3) / 3;
-  }
+				setProperty(p, v) {
+				return this.container.style.setProperty(p, v);
+				}
 
-  this.setProperty('--rY', X.toFixed(2));
-  this.setProperty('--rX', Y.toFixed(2));
+				init() {
+				this.element.addEventListener('mousemove', this.handleMouseMove);
+				this.element.addEventListener('mouseenter', this.handleMouseEnter);
+				this.element.addEventListener('mouseleave', this.handleMouseLeave);
+				}
 
-  this.setProperty('--bY', (80 - (X/4).toFixed(2)) + '%');
-  this.setProperty('--bX', (50 - (Y/4).toFixed(2)) + '%');
-}
+				}
 
-handleMouseEnter() {
-  this.mouseOnComponent = true;
-  this.container.classList.add("container--active");
-}
+				const $ = e => document.querySelector(e);
 
-handleMouseLeave() {
-  this.mouseOnComponent = false;
-  this.defaultStates();
-}
+				const wrap1 = new parallaxTiltEffect({
+				element: $('.wrap--1'),
+				tiltEffect: 'reverse'
+				});
 
-defaultStates() {
-  this.container.classList.remove("container--active");
-  this.setProperty('--rY', 0);
-  this.setProperty('--rX', 0);
-  this.setProperty('--bY', '80%');
-  this.setProperty('--bX', '50%');
-}
+				const wrap2 = new parallaxTiltEffect({
+				element: $('.wrap--2'),
+				tiltEffect: 'reverse'
+				});
 
-setProperty(p, v) {
-  return this.container.style.setProperty(p, v);
-}
+				const wrap3 = new parallaxTiltEffect({
+				element: $('.wrap--3'),
+				tiltEffect: 'reverse'
+				});
+				</script>
+				<script src = "https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+				<script src="js/navbar.js"></script>
+				<script src="js/mediaquery.js"></script>
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/tsparticles/1.31.1/tsparticles.min.js"></script>
 
-init() {
-  this.element.addEventListener('mousemove', this.handleMouseMove);
-  this.element.addEventListener('mouseenter', this.handleMouseEnter);
-  this.element.addEventListener('mouseleave', this.handleMouseLeave);
-}
+				<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-}
-
-const $ = e => document.querySelector(e);
-
-const wrap1 = new parallaxTiltEffect({
-element: $('.wrap--1'),
-tiltEffect: 'reverse'
-});
-
-const wrap2 = new parallaxTiltEffect({
-element: $('.wrap--2'),
-tiltEffect: 'reverse'
-});
-
-const wrap3 = new parallaxTiltEffect({
-element: $('.wrap--3'),
-tiltEffect: 'reverse'
-});
-</script>
-<script src = "https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
-<script src="js/navbar.js"></script>
-<script src="js/mediaquery.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tsparticles/1.31.1/tsparticles.min.js"></script>
-
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-<script>
-    AOS.init();
-</script> 
+				<script>
+					AOS.init();
+				</script> 
 </body>
+
+
+
 </html>
