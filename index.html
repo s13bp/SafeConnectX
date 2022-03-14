@@ -380,6 +380,9 @@ ul{
   padding:0;
   display:flex;
   justify-content: end;
+  -webkit-justify-content: flex-end;
+  align-items: flex-end;
+  -webkit-align-items: flex-end;
   background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.596) 34%, rgba(0, 0, 0, 0.404) 53%, rgba(0, 0, 0, 0.322) 80%);
   backdrop-filter: blur(6px);
  
@@ -523,7 +526,7 @@ figcaption {
   top:40%;
   z-index:2;
 }
-svga {
+.svg {
   display: block;
   height: 100%;
   width: 100%;
@@ -678,9 +681,10 @@ circle {
 						<li><a href="#roadmap">Roadmap</a></li>
 						<li><a href="#tokenomics">Tokenomics</a></li>
 						<li><a href="#whitepaper">Whitepaper</a></li>
+						<li style="margin-right: 20px;"><a href="https://t.me/SafeConnectX " target="_blank"><i class="fab fa-telegram" style="font-size:36px; color: #229ED9; "></i></a></li>
 						<li><a href="https://twitter.com/SafeconnectX" target="_blank"><i class="fab fa-twitter" style="font-size:36px; color: #1DA1F2;"></i></a></li>
 						<li><a href="https://discord.gg/bPeY5nYwze" target="_blank"><i class="fab fa-discord" style="font-size:36px; color: #5865F2; " ></i></a></li>
-						<li style="margin-right: 20px;"><a href="https://t.me/SafeConnectX " target="_blank"><i class="fab fa-telegram" style="font-size:36px; color: #229ED9; "></i></a></li>
+				
 						
 						
 					</ul>
@@ -744,7 +748,7 @@ circle {
 						<button id="mintoza" style="margin-right: 50 px; font-size: 23px; background-color: #120044; color: #FFF; padding-left: 10px; padding-right: 10px; border-radius: 10px;" > MINT NFT </button>
 					
 					</div>
-					<div class="w3-display-topleft w3-hide-small"  style="z-index: 4; color: #FFF; position: fixed; margin-top: 10px;" >  <p>WALLET - <span id="wallet-address" ></span></p></div>
+					<div class="w3-display-topleft w3-hide-small w3-hide-large w3-hide-medium"  style="z-index: 14; color: #FFF; position: fixed; margin-top: 10px;" >  <p>WALLET - <span id="wallet-address" ></span></p></div>
 					
 						<script type="text/javascript">
 							var account = null;
@@ -1737,12 +1741,12 @@ circle {
 
 					</div><br><br><br><br><br><br>
 					<h3 class=" w3-content w3-container w3-center w3-border-black w3-padding-16 w3-xlarge w3-text-white w3-padding" data-aos="zoom-out-down" data-aos-duration="1000" style="background-color: rgba(0, 0, 0, 0);
-						backdrop-filter: blur(5px); max-width: 20%;" data-aos="zoom-in-down" data-aos-duration="1000">COIN DISTRIBUTION</h3><br><br>
-						<div class="w3-container w3-content w3-half" >
-							<figure>
+						backdrop-filter: blur(5px); max-width: 40%;" data-aos="zoom-in-down" data-aos-duration="1000">COIN DISTRIBUTION</h3><br><br>
+					
+							<figure style="background-color: #00000000;">
 								
 								
-								<svg viewBox="0 0 63.6619772368 63.6619772368">
+								<svg class="svg" viewBox="0 0 63.6619772368 63.6619772368">
 									<circle class="pie1" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
 									
 									<circle class="pie2" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
@@ -1758,13 +1762,38 @@ circle {
 							
 							
 
-						</div>
+						
 						<div class="w3-half" >
-							<p> <svg width="100" height="50">
-								<rect x="50" y="20" rx="20" ry="20" width="50" height="50"
-								style="fill:red;stroke:black;stroke-width:5;opacity:0.5; position: relative;" />
-							</svg></p>
-							<p></p>
+							<p style="font-size: 25px;"> <svg width="100" height="50">
+								<rect x="50" y="20" width="50" height="50"
+								style="fill:rgb(23, 182, 182);opacity:1; position: relative;" />
+							</svg> : PRESALE(20%)</p>
+
+							<p style="font-size: 25px;"> <svg width="100" height="50">
+								<rect x="50" y="20" width="50" height="50"
+								style="fill:rgb(48, 0, 104);opacity:1; position: relative;" />
+							</svg> : PRIVATE SALE(12%)</p>
+
+							<p style="font-size: 25px;"> <svg width="100" height="50">
+								<rect x="50" y="20" width="50" height="50"
+								style="fill:hsl(180,70%,20%);opacity:1; position: relative;" />
+							</svg> : ECOSYSTEM(40%)</p>
+
+							<p style="font-size: 25px;"> <svg width="100" height="50">
+								<rect x="50" y="20" width="50" height="50"
+								style="fill:rgb(0, 16, 240);opacity:1; position: relative;" />
+							</svg> : LIQUIDITY(12%)</p>
+
+							<p style="font-size: 25px;"> <svg width="100" height="50">
+								<rect x="50" y="20" width="50" height="50"
+								style="fill:rgb(34, 25, 25);opacity:1; position: relative;" />
+							</svg> : TEAM EQUITY(4%)</p>
+
+							<p style="font-size: 25px;"> <svg width="100" height="50">
+								<rect x="50" y="20" width="50" height="50"
+								style="fill:red;opacity:1; position: relative;" />
+							</svg> : MARKETING(12%)</p>
+							
 
 						</div>
 			</section>
@@ -1916,13 +1945,13 @@ circle {
 					<ul class="phone">
 			
 					
-
-					<li><a href="https://twitter.com/SafeconnectX" target="_blank"><i class="fab fa-twitter" style="font-size:30px; color: #1DA1F2;"></i></a></li>
-					<li><a href="https://discord.gg/bPeY5nYwze" target="_blank"><i class="fab fa-discord" style="font-size:30px; color: #5865F2; " ></i></a></li>
-					<li><a href="https://t.me/SafeConnectX " target="_blank"><i class="fab fa-telegram" style="font-size:30px; color: #229ED9;"></i></a></li>
+						<li><a href="https://t.me/SafeConnectX " target="_blank"><i class="fab fa-telegram" style="font-size:30px; color: #229ED9;"></i></a></li>
+						<li><a href="https://twitter.com/SafeconnectX" target="_blank"><i class="fab fa-twitter" style="font-size:30px; color: #1DA1F2;"></i></a></li>
+						<li><a href="https://discord.gg/bPeY5nYwze" target="_blank"><i class="fab fa-discord" style="font-size:30px; color: #5865F2; " ></i></a></li>
+						
 					
 					
-				</ul>
+				    </ul>
 			
 				</div>
 				<video id="backgroundz-video" autoplay loop muted poster="img/coolvid.mp4">
@@ -1952,7 +1981,7 @@ circle {
 
 					
 
-					<div  class="w3-display-bottommiddle " style="margin-bottom: 70px;" >
+					<div  class="w3-display-bottommiddle w3-hide-small" style="margin-bottom: 70px;" >
 						<div class="btn btn-two">
 						<a href="https://telegram.me/SafeConnectX"  target="_blank"><span><strong>JOIN US!</strong></span></a> 
 						</div>
@@ -2240,7 +2269,7 @@ circle {
 				</div><br><br><br><br><br><br>
 				<h3 class=" w3-content w3-container w3-center w3-border-black w3-padding-16  w3-text-white w3-padding" data-aos="zoom-out-down" data-aos-duration="1000" style="background-color: rgba(0, 0, 0, 0);
 					backdrop-filter: blur(5px);font-size: 45px;" data-aos="zoom-in-down" data-aos-duration="1000">COIN DISTRIBUTION</h3><br><br>
-					<div class="w3-container w3-content "  >
+				
 						<figure class="simu">
 							
 							
@@ -2260,13 +2289,38 @@ circle {
 						
 						
 
-					</div>
+				
 					<div class=" w3-container w3-content" style="margin-top: 190px;">
-						<p> <svg width="100" height="50">
-							<rect x="50" y="20" rx="20" ry="20" width="50" height="50"
-							style="fill:red;stroke:black;stroke-width:5;opacity:0.5; position: relative;" />
-						</svg></p>
-						<p></p>
+						<p style="font-size: 25px;"> <svg width="100" height="50">
+							<rect x="50" y="20" width="50" height="50"
+							style="fill:rgb(23, 182, 182);opacity:1; position: relative;" />
+						</svg> : PRESALE(20%)</p>
+
+						<p style="font-size: 25px;"> <svg width="100" height="50">
+							<rect x="50" y="20" width="50" height="50"
+							style="fill:rgb(48, 0, 104);opacity:1; position: relative;" />
+						</svg> : PRIVATE SALE(12%)</p>
+
+						<p style="font-size: 25px;"> <svg width="100" height="50">
+							<rect x="50" y="20" width="50" height="50"
+							style="fill:hsl(180,70%,20%);opacity:1; position: relative;" />
+						</svg> : ECOSYSTEM(40%)</p>
+
+						<p style="font-size: 25px;"> <svg width="100" height="50">
+							<rect x="50" y="20" width="50" height="50"
+							style="fill:rgb(0, 16, 240);opacity:1; position: relative;" />
+						</svg> : LIQUIDITY(12%)</p>
+
+						<p style="font-size: 25px;"> <svg width="100" height="50">
+							<rect x="50" y="20" width="50" height="50"
+							style="fill:rgb(34, 25, 25);opacity:1; position: relative;" />
+						</svg> : TEAM EQUITY(4%)</p>
+
+						<p style="font-size: 25px;"> <svg width="100" height="50">
+							<rect x="50" y="20" width="50" height="50"
+							style="fill:red;opacity:1; position: relative;" />
+						</svg> : MARKETING(12%)</p>
+						
 
 					</div>
 		</section>
