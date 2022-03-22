@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script type="text/javascript" src="js/zapp.js"></script>
     <script src = "https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+	<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
 	<link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -39,7 +41,9 @@
 		mix-blend-mode: difference;
 		transition-timing-function: ease-out;
 		transition-duration: 50ms;
-    z-index: 3;
+		z-index: 1;
+	
+   
     
 	}
 
@@ -53,7 +57,7 @@
 		opacity: 0.2;
 		transition-timing-function: ease-out;
 		transition-duration: 100ms;
-    z-index: 3;
+		z-index: 1;
     
 	}
 
@@ -634,7 +638,7 @@ circle {
 					backdrop-filter: blur(2px); height:50px;">
 					<script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/coinMarquee.js"></script><div id="coinmarketcap-widget-marquee" coins="1,1027,825,1839,5994,6210,1966,11697" currency="USD" theme="dark" transparent="true" show-symbol-logo="true"></div>
 				</div>
-			<section class="w3-hide-small "  style=" overflow-x: hidden; background: rgba(0, 0, 0, 0.745)  url(img/hero.jpg); background-attachment: fixed;  background-size: 100% 100%; top: 0;  background-blend-mode: darken; z-index: -9; min-width: 100vw;">		
+			<section class="w3-hide-small "  style=" overflow-x: hidden; background: rgba(0, 0, 0, 0.745)  url(img/hero.jpg); background-attachment: fixed;  background-size: 100% 100%; top: 0;  background-blend-mode: darken; z-index: -9; min-width: 100vw; ">		
 					<nav class="menu">
 						<input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open"/>
 						<label class="menu-open-button" for="menu-open">
@@ -707,7 +711,7 @@ circle {
 				
 					</div>
 					
-					<header class="w3-display-container  w3-wide" style="z-index: 2;" >
+					<header class="w3-display-container  w3-wide"  style="z-index: 0; ">
 						<video id="background-video" autoplay loop muted poster="img/coolvid.mp4">
 							<source src="img/noice.mp4" type="video/mp4">
 						</video>
@@ -1802,11 +1806,19 @@ circle {
 						</div> 
 						</div>
 						</div>
+						<div class="w3-container " style="z-index: 9; cursor: grab; margin-left: 10%; margin-right: 10%;">
+							   
+							<model-viewer auto-rotate camera-controls ar style="height: 100vh; width: 100%; z-index: 6;" src="img/6.glb" >
+			
+							</model-viewer>
+			
+						</div>
+			
+
 			</section>
 			</section>
 
-
-
+		
 
 
 
@@ -2324,6 +2336,14 @@ circle {
 						</div>
 					
 					</section>
+					<div class="w3-container" style="z-index: 9; ">
+							   
+						<model-viewer auto-rotate camera-controls ar style="height: 60vh; width: 100%; z-index: 6;" src="img/6.glb" >
+		
+						</model-viewer>
+		
+					</div>
+		
 		</section>
 					<script>
 					const cursor = document.querySelector('.cursor');
