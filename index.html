@@ -174,6 +174,104 @@
   font-size: 1.2rem;
   position: relative;
 }
+.box-model {
+  display: grid;
+  width: 90%;
+  margin: 3%;
+  background: rgba(255, 255, 255, 0);
+  /* grid-template-columns: 3; */
+  /* grid-template-rows: repeat(auto-fit, 150px); */
+  grid-auto-rows: 350px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 30px;
+}
+.box {
+  color: rgb(0, 0, 0);
+}
+.no1 {
+  background: #a8ff78; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #78ffd6,
+    #a8ff78
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #78ffd6,
+    #a8ff78
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.box:hover {
+  transform: translateY(-20px);
+  transition: 0.5s ease-out;
+}
+
+.no2 {
+  background: #fc466b; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #3f5efb,
+    #fc466b
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #3f5efb,
+    #fc466b
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.no3 {
+  background: #ef32d9; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #89fffd,
+    #ef32d9
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #89fffd,
+    #ef32d9
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.no4 {
+  background: #4776e6; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to left,
+    #8e54e9,
+    #4776e6
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to left,
+    #8e54e9,
+    #4776e6
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.box img {
+  height: 100px;
+  margin: 60px 35%;
+  align-items: center;
+  border-radius: 50px;
+}
+.box h2 {
+  font-size: 24px;
+  font-family: monospace;
+  text-align: center;
+}
+.box p {
+  font-size: 20px;
+  text-align: center;
+  word-wrap: break-word;
+  padding: 22px 72px;
+  font-family: monospace;
+}
+
+@media (max-width: 605px) {
+  .box img {
+    margin: 60px 40%;
+  }
+}
 
 
 .abs-site-link {
@@ -638,7 +736,7 @@ circle {
 					backdrop-filter: blur(2px); height:50px;">
 					<script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/coinMarquee.js"></script><div id="coinmarketcap-widget-marquee" coins="1,1027,825,1839,5994,6210,1966,11697" currency="USD" theme="dark" transparent="true" show-symbol-logo="true"></div>
 				</div>
-			<section class="w3-hide-small "  style=" overflow-x: hidden; background: rgba(0, 0, 0, 0.745)  url(img/hero.jpg); background-attachment: fixed;  background-size: 100% 100%; top: 0;  background-blend-mode: darken; z-index: -9; min-width: 100vw; ">		
+			<section class="w3-hide-small "  style=" overflow-x: hidden; background: rgba(0, 0, 0, 0.445)  url(img/bg.jpg); background-attachment: fixed;  background-size: 100% 100%; top: 0;  background-blend-mode: darken; z-index: -9; min-width: 100vw; ">		
 					<nav class="menu">
 						<input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open"/>
 						<label class="menu-open-button" for="menu-open">
@@ -1441,15 +1539,14 @@ circle {
 				
 				
 					<div  id="aboutz" >
-						<div class="w3-container w3-content  w3-center " ><br><br>
+						<div class="w3-container   w3-center " style="margin: 0 8%;" ><br><br>
 							<br><br><br>
-							<h3 class=" w3-content w3-center w3-border-black w3-padding-16 w3-xxxlarge w3-text-white w3-padding" data-aos="zoom-out-down" data-aos-duration="1000" style="background-color: rgba(0, 0, 0, 0);
-							backdrop-filter: blur(5px); border-radius: 20px;border-radius: 20px;">SAFE CONNECTIONS - FOR ALL THINGS BLOCKCHAIN</h3><br><br><br><br>
+							<h3 class=" w3-content w3-center w3-border-black w3-padding-16 w3-xxxlarge w3-text-white w3-padding" data-aos="zoom-out-down" data-aos-duration="1000">SAFE CONNECTIONS - FOR ALL THINGS BLOCKCHAIN</h3><br><br><br><br>
 							
 							
 
-							<p class="w3-content w3-xlarge w3-center w3-text-light-grey w3-padding-64" data-aos="zoom-out-up" data-aos-delay="500" data-aos-duration="1000" style="background-color: rgba(255, 255, 255, 0.144);
-							backdrop-filter: blur(5px); padding-left: 64px; padding-right: 64px; border-radius: 20px;">SafeConnectX comes from experience in the scene. This network directly results from hundreds of interactions, meetings, dealings, friendships, lies, scams, fraud, and emotions. After all my experience, I’ve come to understand what is needed and, more importantly, what actions I would take to achieve successful and profitable longevity within the blockchain. <br> <br>
+							<p class="w3-xlarge w3-center w3-text-light-grey w3-padding" data-aos="zoom-out-up" data-aos-delay="500" data-aos-duration="1000" style="background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9051995798319328) 20%, rgba(0,0,0,0.700717787114846) 50%, rgba(0,0,0,0.34217436974789917) 79%, rgba(0,0,0,0) 100%);
+							backdrop-filter: blur(5px); padding-left: 24px; padding-right: 24px; border-radius: 10px;">SafeConnectX comes from experience in the scene. This network directly results from hundreds of interactions, meetings, dealings, friendships, lies, scams, fraud, and emotions. After all my experience, I’ve come to understand what is needed and, more importantly, what actions I would take to achieve successful and profitable longevity within the blockchain. <br> <br>
 								Being a dev and on the team for multiple projects, I learned what makes a project successful.  Conversely, I watched projects fail. The Block can be a dangerous, risky place, but with a trustworthy source of information and connections, the community will become a more trusting and successful network. Through losing an untold amount of money to scams, bad actors, and rug pulls, I have gained valuable knowledge that can only come from experience. SafeConnectx is a space for you to weed through the bad and find genuine, trusted, and tested connections. If you’re looking for a safe blockchain experience, welcome to SafeConnectX :)
 							</p>
 							</div>
@@ -1504,15 +1601,14 @@ circle {
 						<div class="w3-container" >
 							<div class="w3-content w3-text-white w3-center">
 								<div class="w3-twothird">
-									<h1  class=" w3-xxxlarge w3-border-black w3-text-white w3-padding w3-center" style="background-color: rgba(0, 0, 0, 0);
-									backdrop-filter: blur(5px); border-radius: 20px;"  >
+									<h1  class=" w3-xxxlarge w3-border-black w3-text-white w3-padding w3-center"   >
 									<span data-aos="fade-right" data-aos-delay="500" data-aos-duration="1500">Oustascam.com </span>  <span data-aos="fade-left" data-aos-delay="1500" data-aos-duration="500" > - Coming Soon</span> 
 									</h1>
 									<h1  class="w3-xxxlarge w3-border-black w3-text-white w3-padding w3-center" data-aos="fade-down" data-aos-duration="1000" >
 									
 									</h1>
-								<p class="w3-center w3-xlarge w3-padding-64  w3-text-white" data-aos="fade-right" data-aos-delay="500" data-aos-duration="1000" style="background-color: rgba(255, 255, 255, 0.185);
-								backdrop-filter: blur(5px); border-radius: 20px;">
+								<p class="w3-center w3-xlarge w3-padding w3-text-white" data-aos="fade-right" data-aos-delay="500" data-aos-duration="1000" style="background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9051995798319328) 20%, rgba(0,0,0,0.700717787114846) 50%, rgba(0,0,0,0.34217436974789917) 79%, rgba(0,0,0,0) 100%);
+								backdrop-filter: blur(5px); padding-left: 24px; padding-right: 24px; border-radius: 10px;">
 								<strong>V1 site in development now  <br>  Crypto's  NO scam instagram (clone)
 										all the fun of shilling  + all the fuctions of IG
 										Fun, Interactive, Fair, Unbiased rankings
@@ -1535,17 +1631,16 @@ circle {
 					
 					</div>
 					<div class="w3-container" id="roadmap">
-						<h1 data-aos="zoom-in"  data-aos-duration="500" class="w3-center " style="color: white; max-width: 50%; margin-left: 25%; font-size: 60px; font-weight: bold;  background-color: rgba(0, 0, 0, 0);
-						backdrop-filter: blur(5px);">SAFECONNECT.X ROADMAP</h1><br><br><br>
-						<p class="w3-content w3-xlarge w3-center w3-text-light-grey w3-padding" data-aos="zoom-out-up" data-aos-delay="500" data-aos-duration="1000" style="background-color: rgba(255, 255, 255, 0.185);
-						backdrop-filter: blur(5px); border-radius: 20px;">I'm not one to believe that the future will be as you always expect, nor rely upon it being so. <br> So here's the roadmap, no overpromises - all deliverable and will be delivered with a smile :)
+						<h1 data-aos="zoom-in"  data-aos-duration="500" class="w3-center w3-xxlarge" >SAFECONNECT.X ROADMAP</h1><br><br><br>
+						<p class="w3-content w3-xlarge w3-center w3-text-light-grey w3-padding" data-aos="zoom-out-up" data-aos-delay="500" data-aos-duration="1000" style="background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9051995798319328) 20%, rgba(0,0,0,0.700717787114846) 50%, rgba(0,0,0,0.34217436974789917) 79%, rgba(0,0,0,0) 100%);
+						backdrop-filter: blur(5px); padding-left: 24px; padding-right: 24px; border-radius: 10px;">I'm not one to believe that the future will be as you always expect, nor rely upon it being so. <br> So here's the roadmap, no overpromises - all deliverable and will be delivered with a smile :)
 						</p><br><br>
 						<div class="timeline">
 				
 							<h2 class="timeline__item timeline__item--year" data-aos="zoom-in"  data-aos-duration="500">PHASE 1</h2>
 							
-							<div class="timeline__item" style="color: white;    background-color: rgba(0, 0, 0, 0.185);
-							backdrop-filter: blur(5px);" data-aos="fade-right" data-aos-delay="500" data-aos-duration="500">
+							<div class="timeline__item" style="background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9051995798319328) 20%, rgba(0,0,0,0.700717787114846) 50%, rgba(0,0,0,0.34217436974789917) 79%, rgba(0,0,0,0) 100%);
+							backdrop-filter: blur(5px); " data-aos="fade-right" data-aos-delay="500" data-aos-duration="500">
 							<h3 class="timeline__title" style="font-family: 'Titillium Web', sans-serif; font-weight: 200; ">- Social media creation <br>
 														- Purchase domains <br>
 														- Safeconnect.x platform launch <br>
@@ -1562,8 +1657,8 @@ circle {
 							
 							<h2 class="timeline__item timeline__item--year" data-aos="zoom-in"  data-aos-duration="500">PHASE 2</h2>
 							
-							<div class="timeline__item" style="color: white;    background-color: rgba(0, 0, 0, 0.185);
-							backdrop-filter: blur(5px);" data-aos="fade-left" data-aos-delay="500" data-aos-duration="500">
+							<div class="timeline__item" style="background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9051995798319328) 20%, rgba(0,0,0,0.700717787114846) 50%, rgba(0,0,0,0.34217436974789917) 79%, rgba(0,0,0,0) 100%);
+							backdrop-filter: blur(5px); " data-aos="fade-left" data-aos-delay="500" data-aos-duration="500">
 							<h3 class="timeline__title" style="font-family: 'Titillium Web', sans-serif; font-weight: 200; " >- Oustascam v2 DYOR Hub <br>
 								- Social platform, onboarding <br>
 								- Safeconnect NFT #2 Early investor gift <br>
@@ -1574,8 +1669,8 @@ circle {
 							
 							<h2 class="timeline__item timeline__item--year" data-aos="zoom-in"  data-aos-duration="500">PHASE 3</h2>
 							
-							<div class="timeline__item" style="color: white;    background-color: rgba(0, 0, 0, 0.185);
-							backdrop-filter: blur(5px);" data-aos="fade-right" data-aos-delay="500" data-aos-duration="500">
+							<div class="timeline__item" style="background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9051995798319328) 20%, rgba(0,0,0,0.700717787114846) 50%, rgba(0,0,0,0.34217436974789917) 79%, rgba(0,0,0,0) 100%);
+							backdrop-filter: blur(5px); " data-aos="fade-right" data-aos-delay="500" data-aos-duration="500">
 							<h3 class="timeline__title" style="font-family: 'Titillium Web', sans-serif; font-weight: 200; ">- Safeconnect NFT #3  public onsale offering<br>
 								- Metaverse NFT Gallery  <br>
 								- Launch on Pancakeswap <br>
@@ -1766,49 +1861,38 @@ circle {
 							</svg> : MARKETING(12%)</p>
 							
 
-						</div>
+						</div><br><br><br><br><br><br><br>
 						<div class="w3-container w3-center">
-							<h1 data-aos="fade-right" data-aos-delay="1500" data-aos-duration="1000" style="color: rgb(255, 255, 255); font-size: 20px; margin-left: 50px; font-weight: bold;  " >  OUR SERVICES </h1>
-							<h1 data-aos="zoom-in" data-aos-delay="500" data-aos-duration="500" class="w3-center w3-content" style="color: white; font-size: 60px; font-weight: bold;  background-color: rgba(0, 0, 0, 0.185);
-							backdrop-filter: blur(5px);">SAFU CRYPTO/NFT/META</h1><BR></BR>
-						<div style="margin-left: 7%;" data-aos="fade-up"
-						data-aos-anchor-placement="bottom-bottom" data-aos-duration="1000" data-aos-delay="500">
-							<div  class=" wrap--1 w3-col s4" style="padding-top: 40px;  transform-style: preserve-3d;  
-							transform: perspective(100rem);">
-								<div class="container container--1">
-									<div>
-									<h3></h3><br>
-									<p></p>
-									</div>
-								</div>
-							</div>
-							
-							<div class="wrap--2 w3-col s4" style="padding-top: 40px;  transform-style: preserve-3d;
-							transform: perspective(100rem);">
-								<div class="container container--2">
-									<div>
-									<h3></h3>
-									<p></p>
-									</div>
-								</div>
-							</div>
 						
-							
-							<div class=" wrap--3 w3-col s4" style="padding-top: 40px;  transform-style: preserve-3d;
-							transform: perspective(100rem);">
-								<div class="container container--3">
-								<div>
-									<h3></h3>
-									<p></p>
-								</div>
-								</div>
+							<h1 data-aos="zoom-in" data-aos-delay="500" data-aos-duration="500" class="w3-center w3-content" style="color: white; font-size: 60px; font-weight: bold;">TEAM</h1><BR></BR>
+							<div><br><br><br>
+								<div class="box-model">
+									<div class="box no1">
+									  <img src="https://pbs.twimg.com/profile_images/1311375102810959872/6Z8pY8-9_400x400.jpg" alt="" />
+									  <h2>Bretton boi</h2>
+									  <p>Web developer</p>
+									</div>
+									<div class="box no2">
+									  <img src="https://pbs.twimg.com/profile_images/1311375102810959872/6Z8pY8-9_400x400.jpg" alt="" />
+									  <h2>Bretton boi</h2>
+									  <p>Web developer</p>
+									</div>
+									<div class="box no3">
+									  <img src="https://pbs.twimg.com/profile_images/1311375102810959872/6Z8pY8-9_400x400.jpg" alt="" />
+									  <h2>Bretton boi</h2>
+									  <p>Web developer</p>
+									</div>
+									<div class="box no4">
+									  <img src="https://pbs.twimg.com/profile_images/1311375102810959872/6Z8pY8-9_400x400.jpg" alt="" />
+									  <h2>Bretton boi</h2>
+									  <p>Web developer</p>
+									</div>
+								  </div>
 							</div>
-						</div> 
-						</div>
-						</div>
-						<div class="w3-container " style="z-index: 9; cursor: grab; margin-left: 10%; margin-right: 10%;">
+				    	</div>
+						<div class="w3-container " style="z-index: 9; cursor: grab; margin-left: 15%; margin-right: 15%;">
 							   
-							<model-viewer auto-rotate camera-controls ar style="height: 100vh; width: 100%; z-index: 6;" src="img/6.glb" >
+							<model-viewer auto-rotate camera-controls ar style="height: 100vh; width: 100%; z-index: 6;" src="img/ETH coin.glb" >
 			
 							</model-viewer>
 			
