@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script type="text/javascript" src="js/zapp.js"></script>
+	
     <script src = "https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
 	<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
     <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
@@ -16,51 +16,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;500&family=Titillium+Web:ital,wght@0,200;0,600;1,200&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/stylez.css">
 	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/chart.css">
+
 	
-    <link rel="stylesheet" media="screen and (max-width: 480px) and (orientation:portrait)" href="css/mobile.css">
+
     <title>SafeConnectX</title>
-	<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
 
   <style>
-  * {
-	 margin: 0;
-	 padding: 0;
-	 box-sizing: border-box;
-   cursor: none;
-}
-
-
-.cursor{
-		width: 15px;
-		height: 15px;
-		border-radius: 50%;
-		position: absolute;
-		transform: scale(1);
-		background-color: rgb(255, 255, 255);
-		mix-blend-mode: difference;
-		transition-timing-function: ease-out;
-		transition-duration: 50ms;
-		z-index: 1;
-	
-   
-    
-	}
-
-	.cursor2{
-		width: 20px;
-		height: 20px;
-		border-radius: 50%;
-		position: absolute;
-		transform: scale(2);
-		background-color: rgb(0, 255, 64);
-		opacity: 0.2;
-		transition-timing-function: ease-out;
-		transition-duration: 100ms;
-		z-index: 1;
-    
-	}
 
 
  html, body {
@@ -734,17 +698,25 @@ circle {
   50%,100% {stroke-dasharray: 0,88,12,0;}
 }
 	</style>
+	<style>
+		p,h3,h2,h1 {
+			color: white;
+		}
+	</style>
   
 </head>
-<body >								<div class="cursor w3-hide-small"></div>
-				<div class="cursor2 w3-hide-small"></div>
-				<div style=" position: fixed; z-index: 1;
-				bottom: 0; background-color: rgba(0, 0, 0, 0.952);
-					backdrop-filter: blur(2px); height:50px;">
-					<script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/coinMarquee.js"></script><div id="coinmarketcap-widget-marquee" coins="1,1027,825,1839,5994,6210,1966,11697" currency="USD" theme="dark" transparent="true" show-symbol-logo="true"></div>
-				</div>
+<body >		
+			
+	<div class="popup">
+		<button id="close">&times;</button>
+	 
+	   
+	 
+	  <img style="max-width: 80%; max-height: 80%; margin-top: -40px;" src="img/presale.jpg" alt="">   <p style="color: #cebaff; font-size:30px ; margin-top: 10px;">PRIVATE SALE IS LIVE </p> <br> <p   style="color: #c5acff; font-size:1opx ;">0xf178b82752ec23110B19D6CA5b3738D41D38f8Ea  </p> 
+	 </div>			
+				
 			<section class="w3-hide-small "  style="position: relative; overflow-x: hidden; min-width: 100vw; background-color: #0000007a;">	
-				<video style="z-index: -5000000000000000000000000; position: fixed;" id="background-video" autoplay loop muted poster="img/coolvid.mp4">
+				<video style="z-index: -50000000; position: fixed;" id="background-video" autoplay loop muted poster="img/coolvid.mp4">
 					<source src="img/Circuit - 27725.mp4" type="video/mp4">
 				</video>	
 					<nav class="menu">
@@ -853,7 +825,6 @@ circle {
 								<br> JOIN US!</p>
 						</div><br><br>
 						</div>
-
 
 						
 					<div class="w3-display-middle w3-hide-small w3-hide medium w3-hide-large" style="z-index: 3; color: #FFF; display: flex; margin-bottom: 70px;   margin-top: 230px;">
@@ -2337,7 +2308,7 @@ circle {
 						
 
 				
-					<div class=" w3-container w3-content" style="margin-top: 190px;">
+					<div class=" w3-container w3-content w3-text-white" style="margin-top: 190px;">
 						<p style="font-size: 25px;"> <svg width="100" height="50">
 							<rect x="50" y="20" width="50" height="50"
 							style="fill:rgb(23, 182, 182);opacity:1; position: relative;" />
@@ -2415,118 +2386,11 @@ circle {
 					</div>
 		
 		</section>
-					<script>
-					const cursor = document.querySelector('.cursor');
-					document.addEventListener('mousemove', e => {
-						cursor.setAttribute("style", " top: "+(e.pageY -10)+"px; left: "+(e.pageX -10)+"px; ")
-					});
-
-					const cursor2 = document.querySelector('.cursor2');
-					document.addEventListener('mousemove', e => {
-						cursor2.setAttribute("style", " top: "+(e.pageY -10)+"px; left: "+(e.pageX -10)+"px; ")
-					});
-
-					</script>
 				
 
-				<script>
-				class parallaxTiltEffect {
+		<script src="js/main.js"></script>
+		<script src="js/miane.js"></script>
 
-				constructor({element, tiltEffect}) {
-
-				this.element = element;
-				this.container = this.element.querySelector(".container");
-				this.size = [300, 360];
-				[this.w, this.h] = this.size;
-
-				this.tiltEffect = tiltEffect;
-
-				this.mouseOnComponent = false;
-
-				this.handleMouseMove = this.handleMouseMove.bind(this);
-				this.handleMouseEnter = this.handleMouseEnter.bind(this);
-				this.handleMouseLeave = this.handleMouseLeave.bind(this);
-				this.defaultStates = this.defaultStates.bind(this);
-				this.setProperty = this.setProperty.bind(this);
-				this.init = this.init.bind(this);
-
-				this.init();
-				}
-
-				handleMouseMove(event) {
-				const {offsetX, offsetY} = event;
-
-				let X;
-				let Y;
-
-				if (this.tiltEffect === "reverse") {
-					X = ((offsetX - (this.w/2)) / 3) / 3;
-					Y = (-(offsetY - (this.h/2)) / 3) / 3;
-				}
-
-				else if (this.tiltEffect === "normal") {
-					X = (-(offsetX - (this.w/2)) / 3) / 3;
-					Y = ((offsetY - (this.h/2)) / 3) / 3;
-				}
-
-				this.setProperty('--rY', X.toFixed(2));
-				this.setProperty('--rX', Y.toFixed(2));
-
-				this.setProperty('--bY', (80 - (X/4).toFixed(2)) + '%');
-				this.setProperty('--bX', (50 - (Y/4).toFixed(2)) + '%');
-				}
-
-				handleMouseEnter() {
-				this.mouseOnComponent = true;
-				this.container.classList.add("container--active");
-				}
-
-				handleMouseLeave() {
-				this.mouseOnComponent = false;
-				this.defaultStates();
-				}
-
-				defaultStates() {
-				this.container.classList.remove("container--active");
-				this.setProperty('--rY', 0);
-				this.setProperty('--rX', 0);
-				this.setProperty('--bY', '80%');
-				this.setProperty('--bX', '50%');
-				}
-
-				setProperty(p, v) {
-				return this.container.style.setProperty(p, v);
-				}
-
-				init() {
-				this.element.addEventListener('mousemove', this.handleMouseMove);
-				this.element.addEventListener('mouseenter', this.handleMouseEnter);
-				this.element.addEventListener('mouseleave', this.handleMouseLeave);
-				}
-
-				}
-
-				const $ = e => document.querySelector(e);
-
-				const wrap1 = new parallaxTiltEffect({
-				element: $('.wrap--1'),
-				tiltEffect: 'reverse'
-				});
-
-				const wrap2 = new parallaxTiltEffect({
-				element: $('.wrap--2'),
-				tiltEffect: 'reverse'
-				});
-
-				const wrap3 = new parallaxTiltEffect({
-				element: $('.wrap--3'),
-				tiltEffect: 'reverse'
-				});
-				</script>
-				<script src = "https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
-				<script src="js/navbar.js"></script>
-				<script src="js/mediaquery.js"></script>
-				<script src="https://cdnjs.cloudflare.com/ajax/libs/tsparticles/1.31.1/tsparticles.min.js"></script>
 
 				<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
